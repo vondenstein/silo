@@ -1,0 +1,1478 @@
+[
+  {
+    "id": 119171,
+    "age_ratings": [
+      {
+        "id": 204993,
+        "organization": {
+          "id": 3,
+          "name": "CERO"
+        },
+        "rating_category": {
+          "id": 17,
+          "rating": "Z"
+        },
+        "rating_content_descriptions": [
+          {
+            "id": 61,
+            "description": "Violence"
+          }
+        ]
+      },
+      {
+        "id": 162025,
+        "organization": {
+          "id": 2,
+          "name": "PEGI"
+        },
+        "rating_category": {
+          "id": 12,
+          "rating": "18"
+        },
+        "rating_content_descriptions": [
+          {
+            "id": 55,
+            "description": "Bad Language"
+          },
+          {
+            "id": 51,
+            "description": "Sex"
+          },
+          {
+            "id": 50,
+            "description": "Violence"
+          }
+        ]
+      },
+      {
+        "id": 204994,
+        "organization": {
+          "id": 6,
+          "name": "CLASS_IND"
+        },
+        "rating_category": {
+          "id": 32,
+          "rating": "16"
+        },
+        "rating_content_descriptions": [
+          {
+            "id": 75,
+            "description": "Violência (Violence)"
+          },
+          {
+            "id": 77,
+            "description": "Conteúdo Sexual (Sexual Content)"
+          },
+          {
+            "id": 84,
+            "description": "Linguagem Imprópria (Inappropriate Language)"
+          }
+        ]
+      },
+      {
+        "id": 213789,
+        "organization": {
+          "id": 1,
+          "name": "ESRB"
+        },
+        "rating_category": {
+          "id": 6,
+          "rating": "M"
+        },
+        "rating_content_descriptions": [
+          {
+            "id": 3,
+            "description": "Blood"
+          },
+          {
+            "id": 4,
+            "description": "Blood and Gore"
+          },
+          {
+            "id": 10,
+            "description": "Intense Violence"
+          },
+          {
+            "id": 14,
+            "description": "Nudity"
+          },
+          {
+            "id": 15,
+            "description": "Partial Nudity"
+          },
+          {
+            "id": 17,
+            "description": "Sexual Content"
+          },
+          {
+            "id": 21,
+            "description": "Strong Language"
+          },
+          {
+            "id": 23,
+            "description": "Strong Sexual Content"
+          },
+          {
+            "id": 29,
+            "description": "Violence"
+          },
+          {
+            "id": 88,
+            "description": "Users Interact"
+          }
+        ]
+      },
+      {
+        "id": 161963,
+        "organization": {
+          "id": 5,
+          "name": "GRAC"
+        },
+        "rating_category": {
+          "id": 26,
+          "rating": "19+"
+        },
+        "rating_content_descriptions": [
+          {
+            "id": 71,
+            "description": "Language"
+          },
+          {
+            "id": 73,
+            "description": "Crime, Anti-Social"
+          },
+          {
+            "id": 72,
+            "description": "Alcohol, Tobacco, Drug"
+          },
+          {
+            "id": 68,
+            "description": "Sexuality"
+          },
+          {
+            "id": 69,
+            "description": "Violence"
+          }
+        ]
+      },
+      {
+        "id": 148088,
+        "organization": {
+          "id": 4,
+          "name": "USK"
+        },
+        "rating_category": {
+          "id": 22,
+          "rating": "18"
+        }
+      },
+      {
+        "id": 162028,
+        "organization": {
+          "id": 7,
+          "name": "ACB"
+        },
+        "rating_category": {
+          "id": 37,
+          "rating": "MA 15+"
+        }
+      }
+    ],
+    "aggregated_rating": 94.5,
+    "aggregated_rating_count": 10,
+    "alternative_names": [
+      {
+        "id": 78597,
+        "comment": "Alternative spelling",
+        "name": "Baldurs Gate 3"
+      },
+      {
+        "id": 139162,
+        "comment": "Acronym",
+        "name": "BG3"
+      },
+      {
+        "id": 174931,
+        "comment": "Acronym",
+        "name": "BGIII"
+      },
+      {
+        "id": 178305,
+        "comment": "windows executable",
+        "name": "Launcher\\LariLauncher.exe"
+      },
+      {
+        "id": 179843,
+        "comment": "Alternative spelling",
+        "name": "Baldur\u0027s Gate 3"
+      },
+      {
+        "id": 183498,
+        "comment": "Stylized title",
+        "name": "Baldur\u0027s Gate 3"
+      }
+    ],
+    "artworks": [
+      {
+        "id": 169875,
+        "height": 620,
+        "image_id": "ar3n2r",
+        "width": 1920
+      },
+      {
+        "id": 169876,
+        "height": 1076,
+        "image_id": "ar3n2s",
+        "width": 2560
+      },
+      {
+        "id": 169877,
+        "height": 563,
+        "image_id": "ar3n2t",
+        "width": 996
+      },
+      {
+        "id": 178125,
+        "height": 1440,
+        "image_id": "ar3tfx",
+        "width": 3440
+      }
+    ],
+    "cover": {
+      "id": 289025,
+      "height": 800,
+      "image_id": "co670h",
+      "width": 600
+    },
+    "external_games": [
+      {
+        "id": 1775824,
+        "name": "Baldur\u0027s Gate 3",
+        "url": "https://www.giantbomb.com/games/3030-73727/",
+        "external_game_source": 3
+      },
+      {
+        "id": 1914473,
+        "name": "Baldur\u0027s Gate 3",
+        "url": "https://www.twitch.tv/directory/game/Baldur%27s%20Gate%203",
+        "external_game_source": 14
+      },
+      {
+        "id": 2869528,
+        "name": "Baldur\u0027s Gate 3",
+        "url": "https://www.xbox.com/en-us/games/store/baldur\u0027s-gate-3/9ND58LQTG09T",
+        "external_game_source": 11
+      },
+      {
+        "id": 2070558,
+        "name": "Baldur\u0027s Gate 3",
+        "url": "https://www.gog.com/en/game/baldurs_gate_iii",
+        "external_game_source": 5
+      },
+      {
+        "id": 2678929,
+        "name": "Baldur\u0027s Gate 3",
+        "url": "https://store.playstation.com/en-us/concept/10007460",
+        "external_game_source": 36
+      },
+      {
+        "id": 1725312,
+        "name": "Baldur\u0027s Gate 3",
+        "url": "https://store.steampowered.com/app/1086940",
+        "external_game_source": 1
+      }
+    ],
+    "first_release_date": 1691020800,
+    "franchises": [
+      {
+        "id": 43,
+        "name": "Dungeons \u0026 Dragons",
+        "slug": "dungeons-dragons"
+      },
+      {
+        "id": 6951,
+        "name": "Forgotten Realms",
+        "slug": "forgotten-realms"
+      }
+    ],
+    "game_engines": [
+      {
+        "id": 255,
+        "name": "Divinity Engine",
+        "slug": "divinity-engine"
+      }
+    ],
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player",
+        "slug": "single-player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer",
+        "slug": "multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative",
+        "slug": "co-operative"
+      },
+      {
+        "id": 4,
+        "name": "Split screen",
+        "slug": "split-screen"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)",
+        "slug": "role-playing-rpg"
+      },
+      {
+        "id": 15,
+        "name": "Strategy",
+        "slug": "strategy"
+      },
+      {
+        "id": 16,
+        "name": "Turn-based strategy (TBS)",
+        "slug": "turn-based-strategy-tbs"
+      }
+    ],
+    "hypes": 39,
+    "involved_companies": [
+      {
+        "id": 214383,
+        "company": {
+          "id": 47197,
+          "name": "Wushu Studios",
+          "slug": "wushu-studios"
+        },
+        "developer": false,
+        "porting": false,
+        "publisher": false,
+        "supporting": true
+      },
+      {
+        "id": 301215,
+        "company": {
+          "id": 8444,
+          "name": "Anshar Studios",
+          "slug": "anshar-studios"
+        },
+        "developer": false,
+        "porting": false,
+        "publisher": false,
+        "supporting": true
+      },
+      {
+        "id": 334788,
+        "company": {
+          "id": 510,
+          "name": "Larian Studios",
+          "slug": "larian-studios"
+        },
+        "developer": true,
+        "porting": false,
+        "publisher": true,
+        "supporting": false
+      }
+    ],
+    "keywords": [
+      {
+        "id": 72,
+        "name": "exploration",
+        "slug": "exploration"
+      },
+      {
+        "id": 98,
+        "name": "monsters",
+        "slug": "monsters"
+      },
+      {
+        "id": 109,
+        "name": "violence",
+        "slug": "violence"
+      },
+      {
+        "id": 129,
+        "name": "bloody",
+        "slug": "bloody"
+      },
+      {
+        "id": 151,
+        "name": "medieval",
+        "slug": "medieval"
+      },
+      {
+        "id": 182,
+        "name": "character customization",
+        "slug": "character-customization"
+      },
+      {
+        "id": 223,
+        "name": "dark",
+        "slug": "dark"
+      },
+      {
+        "id": 226,
+        "name": "magic",
+        "slug": "magic"
+      },
+      {
+        "id": 415,
+        "name": "turn-based",
+        "slug": "turn-based"
+      },
+      {
+        "id": 422,
+        "name": "choose your own adventure",
+        "slug": "choose-your-own-adventure"
+      },
+      {
+        "id": 510,
+        "name": "crafting",
+        "slug": "crafting"
+      },
+      {
+        "id": 537,
+        "name": "dark fantasy",
+        "slug": "dark-fantasy"
+      },
+      {
+        "id": 1069,
+        "name": "demons",
+        "slug": "demons"
+      },
+      {
+        "id": 1308,
+        "name": "gore",
+        "slug": "gore"
+      },
+      {
+        "id": 1313,
+        "name": "multiple endings",
+        "slug": "multiple-endings"
+      },
+      {
+        "id": 1345,
+        "name": "traps",
+        "slug": "traps"
+      },
+      {
+        "id": 1884,
+        "name": "combat",
+        "slug": "combat"
+      },
+      {
+        "id": 1923,
+        "name": "grid-based movement",
+        "slug": "grid-based-movement"
+      },
+      {
+        "id": 1931,
+        "name": "dice",
+        "slug": "dice"
+      },
+      {
+        "id": 1961,
+        "name": "nudity",
+        "slug": "nudity"
+      },
+      {
+        "id": 2228,
+        "name": "dungeon crawler",
+        "slug": "dungeon-crawler"
+      },
+      {
+        "id": 2242,
+        "name": "good vs evil",
+        "slug": "good-vs-evil"
+      },
+      {
+        "id": 2377,
+        "name": "party-based",
+        "slug": "party-based"
+      },
+      {
+        "id": 3534,
+        "name": "choices matter",
+        "slug": "choices-matter"
+      },
+      {
+        "id": 3586,
+        "name": "sexual content",
+        "slug": "sexual-content"
+      },
+      {
+        "id": 4248,
+        "name": "tactical turn-based combat",
+        "slug": "tactical-turn-based-combat"
+      },
+      {
+        "id": 4272,
+        "name": "customizable characters",
+        "slug": "customizable-characters"
+      },
+      {
+        "id": 4284,
+        "name": "leveling up",
+        "slug": "leveling-up"
+      },
+      {
+        "id": 4399,
+        "name": "loot gathering",
+        "slug": "loot-gathering"
+      },
+      {
+        "id": 4471,
+        "name": "multiple storylines",
+        "slug": "multiple-storylines"
+      },
+      {
+        "id": 4823,
+        "name": "character creation",
+        "slug": "character-creation"
+      },
+      {
+        "id": 4850,
+        "name": "moral decisions",
+        "slug": "moral-decisions"
+      },
+      {
+        "id": 4855,
+        "name": "branching storyline",
+        "slug": "branching-storyline"
+      },
+      {
+        "id": 4998,
+        "name": "betrayal",
+        "slug": "betrayal"
+      },
+      {
+        "id": 9005,
+        "name": "redemption",
+        "slug": "redemption"
+      },
+      {
+        "id": 9181,
+        "name": "friendship",
+        "slug": "friendship"
+      },
+      {
+        "id": 12083,
+        "name": "the game awards - best score or music - nominee",
+        "slug": "the-game-awards-best-score-or-music-nominee"
+      },
+      {
+        "id": 17092,
+        "name": "immersive",
+        "slug": "immersive"
+      },
+      {
+        "id": 25527,
+        "name": "meaningful choices",
+        "slug": "meaningful-choices"
+      },
+      {
+        "id": 25963,
+        "name": "turn-based rpg",
+        "slug": "turn-based-rpg"
+      },
+      {
+        "id": 27054,
+        "name": "you can pet the dog",
+        "slug": "you-can-pet-the-dog"
+      },
+      {
+        "id": 37861,
+        "name": "steam deck",
+        "slug": "steam-deck"
+      },
+      {
+        "id": 39024,
+        "name": "the game awards - best game direction - nominee",
+        "slug": "the-game-awards-best-game-direction-nominee"
+      },
+      {
+        "id": 39033,
+        "name": "the game awards - best multiplayer game - winner",
+        "slug": "the-game-awards-best-multiplayer-game-winner"
+      },
+      {
+        "id": 39034,
+        "name": "the game awards - best narrative - nominee",
+        "slug": "the-game-awards-best-narrative-nominee"
+      },
+      {
+        "id": 39039,
+        "name": "the game awards - best performance - winner",
+        "slug": "the-game-awards-best-performance-winner"
+      },
+      {
+        "id": 39041,
+        "name": "the game awards - best roleplaying game - winner",
+        "slug": "the-game-awards-best-roleplaying-game-winner"
+      },
+      {
+        "id": 39046,
+        "name": "the game awards - game of the year - winner",
+        "slug": "the-game-awards-game-of-the-year-winner"
+      },
+      {
+        "id": 43103,
+        "name": "spells",
+        "slug": "spells"
+      },
+      {
+        "id": 43481,
+        "name": "puzzles",
+        "slug": "puzzles"
+      },
+      {
+        "id": 43861,
+        "name": "isometric",
+        "slug": "isometric"
+      }
+    ],
+    "multiplayer_modes": [
+      {
+        "id": 24930,
+        "campaigncoop": true,
+        "dropin": true,
+        "game": 119171,
+        "lancoop": false,
+        "offlinecoop": false,
+        "offlinecoopmax": 2,
+        "offlinemax": 1,
+        "onlinecoop": true,
+        "onlinecoopmax": 4,
+        "onlinemax": 4,
+        "platform": 167,
+        "splitscreen": true,
+        "checksum": "35b8dfce-0b4f-e071-8a43-c3b30557b111"
+      },
+      {
+        "id": 25469,
+        "campaigncoop": true,
+        "dropin": true,
+        "game": 119171,
+        "lancoop": true,
+        "offlinecoop": true,
+        "offlinecoopmax": 1,
+        "offlinemax": 1,
+        "onlinecoop": true,
+        "onlinecoopmax": 4,
+        "onlinemax": 4,
+        "platform": 6,
+        "splitscreen": true,
+        "checksum": "48983ccd-a7cf-4c7b-cadd-5db3af1c8aab"
+      }
+    ],
+    "name": "Baldur\u0027s Gate III",
+    "platforms": [
+      {
+        "id": 170,
+        "abbreviation": "Stadia",
+        "name": "Google Stadia",
+        "platform_family": {
+          "id": 4,
+          "name": "Linux"
+        },
+        "slug": "stadia",
+        "platform_type": 3
+      },
+      {
+        "id": 169,
+        "abbreviation": "Series X|S",
+        "name": "Xbox Series X|S",
+        "platform_family": {
+          "id": 2,
+          "name": "Xbox"
+        },
+        "slug": "series-x-s",
+        "platform_type": 1
+      },
+      {
+        "id": 3,
+        "abbreviation": "Linux",
+        "name": "Linux",
+        "platform_family": {
+          "id": 4,
+          "name": "Linux"
+        },
+        "slug": "linux",
+        "platform_type": 4
+      },
+      {
+        "id": 6,
+        "abbreviation": "PC",
+        "name": "PC (Microsoft Windows)",
+        "slug": "win",
+        "platform_type": 4
+      },
+      {
+        "id": 167,
+        "abbreviation": "PS5",
+        "name": "PlayStation 5",
+        "platform_family": {
+          "id": 1,
+          "name": "PlayStation"
+        },
+        "slug": "ps5",
+        "platform_type": 1
+      },
+      {
+        "id": 14,
+        "abbreviation": "Mac",
+        "name": "Mac",
+        "slug": "mac",
+        "platform_type": 4
+      }
+    ],
+    "player_perspectives": [
+      {
+        "id": 3,
+        "name": "Bird view / Isometric",
+        "slug": "bird-view-slash-isometric"
+      }
+    ],
+    "rating": 95.65490642540496,
+    "rating_count": 1454,
+    "release_dates": [
+      {
+        "id": 574300,
+        "date": 1695340800,
+        "human": "Sep 22, 2023",
+        "m": 9,
+        "platform": {
+          "id": 14,
+          "name": "Mac"
+        },
+        "y": 2023,
+        "status": 6,
+        "date_format": 0,
+        "release_region": 8
+      },
+      {
+        "id": 487025,
+        "date": 1693958400,
+        "human": "Sep 06, 2023",
+        "m": 9,
+        "platform": {
+          "id": 167,
+          "name": "PlayStation 5"
+        },
+        "y": 2023,
+        "status": 6,
+        "date_format": 0,
+        "release_region": 8
+      },
+      {
+        "id": 543182,
+        "date": 1701993600,
+        "human": "Dec 08, 2023",
+        "m": 12,
+        "platform": {
+          "id": 169,
+          "name": "Xbox Series X|S"
+        },
+        "y": 2023,
+        "status": 6,
+        "date_format": 0,
+        "release_region": 8
+      },
+      {
+        "id": 543563,
+        "date": 1601942400,
+        "human": "Oct 06, 2020",
+        "m": 10,
+        "platform": {
+          "id": 6,
+          "name": "PC (Microsoft Windows)"
+        },
+        "y": 2020,
+        "status": 3,
+        "date_format": 0,
+        "release_region": 8
+      },
+      {
+        "id": 543566,
+        "date": 1601942400,
+        "human": "Oct 06, 2020",
+        "m": 10,
+        "platform": {
+          "id": 14,
+          "name": "Mac"
+        },
+        "y": 2020,
+        "status": 3,
+        "date_format": 0,
+        "release_region": 8
+      },
+      {
+        "id": 781205,
+        "human": "TBD",
+        "platform": {
+          "id": 170,
+          "name": "Google Stadia"
+        },
+        "status": 5,
+        "date_format": 7,
+        "release_region": 8
+      },
+      {
+        "id": 543567,
+        "date": 1601942400,
+        "human": "Oct 06, 2020",
+        "m": 10,
+        "platform": {
+          "id": 170,
+          "name": "Google Stadia"
+        },
+        "y": 2020,
+        "status": 3,
+        "date_format": 0,
+        "release_region": 8
+      },
+      {
+        "id": 508258,
+        "date": 1691020800,
+        "human": "Aug 03, 2023",
+        "m": 8,
+        "platform": {
+          "id": 6,
+          "name": "PC (Microsoft Windows)"
+        },
+        "y": 2023,
+        "status": 6,
+        "date_format": 0,
+        "release_region": 8
+      },
+      {
+        "id": 875774,
+        "date": 1758585600,
+        "human": "Sep 23, 2025",
+        "m": 9,
+        "platform": {
+          "id": 3,
+          "name": "Linux"
+        },
+        "y": 2025,
+        "status": 6,
+        "date_format": 0,
+        "release_region": 8
+      }
+    ],
+    "screenshots": [
+      {
+        "id": 375103,
+        "height": 1080,
+        "image_id": "sc81fj",
+        "width": 1920
+      },
+      {
+        "id": 375101,
+        "height": 1080,
+        "image_id": "sc81fh",
+        "width": 1920
+      },
+      {
+        "id": 375099,
+        "height": 1080,
+        "image_id": "sc81ff",
+        "width": 1920
+      },
+      {
+        "id": 375105,
+        "height": 1080,
+        "image_id": "sc81fl",
+        "width": 1920
+      },
+      {
+        "id": 375107,
+        "height": 1080,
+        "image_id": "sc81fn",
+        "width": 1920
+      },
+      {
+        "id": 375098,
+        "height": 1080,
+        "image_id": "sc81fe",
+        "width": 1920
+      },
+      {
+        "id": 1381715,
+        "height": 1440,
+        "image_id": "sctm4z",
+        "width": 2560
+      },
+      {
+        "id": 1581035,
+        "height": 1072,
+        "image_id": "scxvxn",
+        "width": 2560
+      },
+      {
+        "id": 1581036,
+        "height": 1620,
+        "image_id": "scxvxo",
+        "width": 2880
+      },
+      {
+        "id": 1577635,
+        "height": 1440,
+        "image_id": "scxtb7",
+        "width": 2560
+      },
+      {
+        "id": 1577636,
+        "height": 1440,
+        "image_id": "scxtb8",
+        "width": 2560
+      },
+      {
+        "id": 1577632,
+        "height": 1080,
+        "image_id": "scxtb4",
+        "width": 1920
+      },
+      {
+        "id": 1577633,
+        "height": 1080,
+        "image_id": "scxtb5",
+        "width": 1920
+      },
+      {
+        "id": 1577634,
+        "height": 1440,
+        "image_id": "scxtb6",
+        "width": 2560
+      },
+      {
+        "id": 1581048,
+        "height": 1990,
+        "image_id": "scxvy0",
+        "width": 3837
+      },
+      {
+        "id": 1581049,
+        "height": 1080,
+        "image_id": "scxvy1",
+        "width": 1920
+      }
+    ],
+    "slug": "baldurs-gate-iii",
+    "storyline": "The land of Faerûn is in turmoil. Refugees cross the wilds, fleeing the helltorn stronghold of Elturel. A vicious cult marches across the Sword Coast, uniting every race of monsters and men under the banner of a cryptic god they call the Absolute. Chaos strikes at Faerûn\u0027s foundations, and none may escape its talons. Not even you.\n\nThe grotesque nautiloid ship appears out of nowhere, blotting out the sun. Its writhing tentacles snatch you from where you stand. The mind flayers have come, imprisoning you on their ship, infecting you with their horrid parasite. You will become one of them.\n\nBy fate or fortune, you survive when the nautiloid crashes in the Sword Coast outlands. You set out for civilisation, desperate for a cure for the parasite festering in your brain, only to take centre stage in a conspiracy that runs as deep as the Nine Hells. New enemies await.\n\nAs for old foes... the shadows stir.\nAnd all roads lead to the legendary city of Baldur\u0027s Gate.",
+    "summary": "An ancient evil has returned to Baldur\u0027s Gate, intent on devouring it from the inside out. The fate of Faerun lies in your hands. Alone, you may resist. But together, you can overcome.",
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action",
+        "slug": "action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy",
+        "slug": "fantasy"
+      }
+    ],
+    "total_rating": 95.07745321270248,
+    "total_rating_count": 1464,
+    "url": "https://www.igdb.com/games/baldurs-gate-iii",
+    "videos": [
+      {
+        "id": 34304,
+        "name": "Cinematic Trailer",
+        "video_id": "jNY7AEQ59-8"
+      },
+      {
+        "id": 37259,
+        "name": "Trailer",
+        "video_id": "o5xpbAsly48"
+      },
+      {
+        "id": 80611,
+        "name": "Trailer",
+        "video_id": "tavPnYeFrV4"
+      },
+      {
+        "id": 91735,
+        "name": "Trailer",
+        "video_id": "zTX79cgruXE"
+      },
+      {
+        "id": 91736,
+        "name": "Dev Diary",
+        "video_id": "t0uYhTLPGLQ"
+      },
+      {
+        "id": 95037,
+        "name": "Launch Trailer",
+        "video_id": "XuCfkgaaa08"
+      },
+      {
+        "id": 153814,
+        "name": "Announcement Trailer",
+        "video_id": "OcP0WdH7rTs"
+      },
+      {
+        "id": 153815,
+        "name": "Release Date Trailer",
+        "video_id": "Ks-KF9iueE0"
+      }
+    ],
+    "websites": [
+      {
+        "id": 746418,
+        "url": "https://www.youtube.com/LarianStudios/",
+        "type": 9
+      },
+      {
+        "id": 746412,
+        "url": "https://baldursgate3.game",
+        "type": 1
+      },
+      {
+        "id": 804313,
+        "url": "https://store.playstation.com/en-us/concept/10007460",
+        "type": 23
+      },
+      {
+        "id": 804312,
+        "url": "https://www.xbox.com/en-us/games/store/baldur\u0027s-gate-3/9ND58LQTG09T",
+        "type": 22
+      },
+      {
+        "id": 746415,
+        "url": "https://x.com/baldursgate3",
+        "type": 5
+      },
+      {
+        "id": 746414,
+        "url": "https://www.facebook.com/baldursgate3/",
+        "type": 4
+      },
+      {
+        "id": 750829,
+        "url": "https://www.gog.com/en/game/baldurs_gate_iii",
+        "type": 17
+      },
+      {
+        "id": 246552,
+        "url": "https://store.steampowered.com/app/1086940",
+        "type": 13
+      },
+      {
+        "id": 388947,
+        "url": "https://www.twitch.tv/directory/game/Baldur\u0027s%20Gate%203",
+        "type": 6
+      },
+      {
+        "id": 113817,
+        "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate_III",
+        "type": 3
+      },
+      {
+        "id": 578549,
+        "url": "https://www.reddit.com/r/BaldursGate3/",
+        "type": 14
+      },
+      {
+        "id": 707278,
+        "url": "https://bg3.wiki/wiki/Baldur%27s_Gate_3",
+        "type": 2
+      },
+      {
+        "id": 662348,
+        "url": "https://discord.gg/invite/larianstudios",
+        "type": 18
+      },
+      {
+        "id": 662347,
+        "url": "https://www.instagram.com/larianstudios/",
+        "type": 8
+      },
+      {
+        "id": 707279,
+        "url": "https://bsky.app/profile/larianstudios.com",
+        "type": 19
+      }
+    ],
+    "language_supports": [
+      {
+        "id": 233666,
+        "language": {
+          "id": 7,
+          "name": "English",
+          "locale": "en-US"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233668,
+        "language": {
+          "id": 7,
+          "name": "English",
+          "locale": "en-US"
+        },
+        "language_support_type": {
+          "id": 1,
+          "name": "Audio"
+        }
+      },
+      {
+        "id": 233670,
+        "language": {
+          "id": 7,
+          "name": "English",
+          "locale": "en-US"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 233672,
+        "language": {
+          "id": 12,
+          "name": "French",
+          "locale": "fr-FR"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233674,
+        "language": {
+          "id": 12,
+          "name": "French",
+          "locale": "fr-FR"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 233676,
+        "language": {
+          "id": 27,
+          "name": "German",
+          "locale": "de-DE"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233678,
+        "language": {
+          "id": 27,
+          "name": "German",
+          "locale": "de-DE"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 233680,
+        "language": {
+          "id": 9,
+          "name": "Spanish (Spain)",
+          "locale": "es-ES"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233682,
+        "language": {
+          "id": 9,
+          "name": "Spanish (Spain)",
+          "locale": "es-ES"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 233686,
+        "language": {
+          "id": 22,
+          "name": "Russian",
+          "locale": "ru-RU"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233684,
+        "language": {
+          "id": 19,
+          "name": "Polish",
+          "locale": "pl-PL"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233685,
+        "language": {
+          "id": 19,
+          "name": "Polish",
+          "locale": "pl-PL"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 233687,
+        "language": {
+          "id": 22,
+          "name": "Russian",
+          "locale": "ru-RU"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 233688,
+        "language": {
+          "id": 2,
+          "name": "Chinese (Simplified)",
+          "locale": "zh-CN"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233689,
+        "language": {
+          "id": 2,
+          "name": "Chinese (Simplified)",
+          "locale": "zh-CN"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 233690,
+        "language": {
+          "id": 24,
+          "name": "Turkish",
+          "locale": "tr-TR"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233691,
+        "language": {
+          "id": 24,
+          "name": "Turkish",
+          "locale": "tr-TR"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 233692,
+        "language": {
+          "id": 21,
+          "name": "Portuguese (Brazil)",
+          "locale": "pt-BR"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 233693,
+        "language": {
+          "id": 21,
+          "name": "Portuguese (Brazil)",
+          "locale": "pt-BR"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 793408,
+        "language": {
+          "id": 10,
+          "name": "Spanish (Mexico)",
+          "locale": "es-MX"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 744315,
+        "language": {
+          "id": 15,
+          "name": "Italian",
+          "locale": "it-IT"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 744316,
+        "language": {
+          "id": 28,
+          "name": "Ukrainian",
+          "locale": "uk-UA"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 744317,
+        "language": {
+          "id": 3,
+          "name": "Chinese (Traditional)",
+          "locale": "zh-TW"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 863445,
+        "language": {
+          "id": 10,
+          "name": "Spanish (Mexico)",
+          "locale": "es-MX"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 863446,
+        "language": {
+          "id": 15,
+          "name": "Italian",
+          "locale": "it-IT"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 863447,
+        "language": {
+          "id": 17,
+          "name": "Korean",
+          "locale": "ko-KR"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      },
+      {
+        "id": 863448,
+        "language": {
+          "id": 17,
+          "name": "Korean",
+          "locale": "ko-KR"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 863449,
+        "language": {
+          "id": 3,
+          "name": "Chinese (Traditional)",
+          "locale": "zh-TW"
+        },
+        "language_support_type": {
+          "id": 2,
+          "name": "Subtitles"
+        }
+      },
+      {
+        "id": 1284199,
+        "language": {
+          "id": 16,
+          "name": "Japanese",
+          "locale": "ja-JP"
+        },
+        "language_support_type": {
+          "id": 3,
+          "name": "Interface"
+        }
+      }
+    ],
+    "game_localizations": [
+      {
+        "id": 20906,
+        "name": "발더스 게이트 3",
+        "region": 2
+      },
+      {
+        "id": 31097,
+        "name": "バルダーズ・ゲートiii",
+        "region": 3
+      }
+    ],
+    "collections": [
+      {
+        "id": 7,
+        "name": "Baldur\u0027s Gate",
+        "slug": "baldur-s-gate"
+      }
+    ],
+    "game_type": {
+      "id": 0,
+      "type": "Main Game"
+    }
+  }
+]

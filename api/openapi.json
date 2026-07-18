@@ -1,0 +1,4675 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Silo",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "get_health",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/libraries": {
+      "get": {
+        "tags": [
+          "libraries"
+        ],
+        "summary": "List Libraries",
+        "operationId": "list_libraries",
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Opaque cursor from next_cursor.",
+              "title": "Cursor"
+            },
+            "description": "Opaque cursor from next_cursor."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "description": "Page size.",
+              "default": 50,
+              "title": "Limit"
+            },
+            "description": "Page size."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Page_Library_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "libraries"
+        ],
+        "summary": "Create Library",
+        "operationId": "create_library",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LibraryCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/libraries/{library_id}": {
+      "get": {
+        "tags": [
+          "libraries"
+        ],
+        "summary": "Get Library",
+        "operationId": "get_library",
+        "parameters": [
+          {
+            "name": "library_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Library Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "libraries"
+        ],
+        "summary": "Update Library",
+        "operationId": "update_library",
+        "parameters": [
+          {
+            "name": "library_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Library Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LibraryPatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "libraries"
+        ],
+        "summary": "Delete Library",
+        "operationId": "delete_library",
+        "parameters": [
+          {
+            "name": "library_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Library Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/games": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "List Games",
+        "operationId": "list_games",
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Opaque cursor from next_cursor.",
+              "title": "Cursor"
+            },
+            "description": "Opaque cursor from next_cursor."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "description": "Page size.",
+              "default": 50,
+              "title": "Limit"
+            },
+            "description": "Page size."
+          },
+          {
+            "name": "library_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Library Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Page_Game_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Create Game",
+        "operationId": "create_game",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GameCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Game"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/games/{game_id}": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Get Game",
+        "operationId": "get_game",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Update Game",
+        "operationId": "update_game",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GamePatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Game"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Delete Game",
+        "operationId": "delete_game",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          },
+          {
+            "name": "delete_files",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Delete Files"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/games/{game_id}/resolve-metadata": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Resolve Metadata",
+        "operationId": "resolve_game_metadata",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Game"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/games/{game_id}/fetch-metadata": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Fetch Metadata",
+        "operationId": "fetch_game_metadata",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobEnqueuedOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/games/{game_id}/locks/{field_key}": {
+      "put": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Lock Field",
+        "operationId": "lock_field",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          },
+          {
+            "name": "field_key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/FieldKey"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Unlock Field",
+        "operationId": "unlock_field",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          },
+          {
+            "name": "field_key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/FieldKey"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/games/{game_id}/identities/{source_slug}": {
+      "put": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Set Game Identity",
+        "operationId": "set_game_identity",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          },
+          {
+            "name": "source_slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Source Slug"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentityPut"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Delete Game Identity",
+        "operationId": "delete_game_identity",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          },
+          {
+            "name": "source_slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Source Slug"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/games/{game_id}/assets": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Get Game Assets",
+        "operationId": "get_game_assets",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameAssetCandidates"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/games/{game_id}/assets/{kind}": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Upload Game Asset",
+        "operationId": "upload_game_asset",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AssetKind"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_game_asset"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetCandidateOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Set Game Assets",
+        "operationId": "set_game_assets",
+        "parameters": [
+          {
+            "name": "game_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Game Id"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AssetKind"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetKindPut"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/metadata-sources": {
+      "get": {
+        "tags": [
+          "metadata-sources"
+        ],
+        "summary": "List Metadata Sources",
+        "operationId": "list_metadata_sources",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/MetadataSource"
+                  },
+                  "type": "array",
+                  "title": "Response List Metadata Sources"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/metadata-sources/{slug}/search": {
+      "get": {
+        "tags": [
+          "metadata-sources"
+        ],
+        "summary": "Search Metadata Source",
+        "operationId": "search_metadata_source",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Slug"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255,
+              "title": "Q"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SearchCandidateOut"
+                  },
+                  "title": "Response Search Metadata Source"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/metadata-sources/{source_id}": {
+      "patch": {
+        "tags": [
+          "metadata-sources"
+        ],
+        "summary": "Update Metadata Source",
+        "operationId": "update_metadata_source",
+        "parameters": [
+          {
+            "name": "source_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Source Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetadataSourcePatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetadataSource"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/metadata-records/renormalize": {
+      "post": {
+        "tags": [
+          "metadata-records"
+        ],
+        "summary": "Renormalize Metadata",
+        "operationId": "renormalize_metadata",
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobEnqueuedOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/secrets": {
+      "get": {
+        "tags": [
+          "secrets"
+        ],
+        "summary": "List Secrets",
+        "operationId": "list_secrets",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array",
+                  "title": "Response List Secrets"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/secrets/{name}": {
+      "put": {
+        "tags": [
+          "secrets"
+        ],
+        "summary": "Set Secret",
+        "operationId": "set_secret",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Name"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SecretPut"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "secrets"
+        ],
+        "summary": "Delete Secret",
+        "operationId": "delete_secret",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Name"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/assets/{blake3}": {
+      "get": {
+        "tags": [
+          "assets"
+        ],
+        "summary": "Get Asset",
+        "operationId": "get_asset",
+        "parameters": [
+          {
+            "name": "blake3",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$",
+              "title": "Blake3"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/upload/stage": {
+      "post": {
+        "tags": [
+          "upload"
+        ],
+        "summary": "Stage Upload",
+        "operationId": "stage_upload",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_stage_upload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StageOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/upload/finalize": {
+      "post": {
+        "tags": [
+          "upload"
+        ],
+        "summary": "Finalize Upload",
+        "operationId": "finalize_upload",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FinalizeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FinalizeOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/upload/stage/{stage_id}": {
+      "delete": {
+        "tags": [
+          "upload"
+        ],
+        "summary": "Cancel Upload",
+        "operationId": "cancel_upload",
+        "parameters": [
+          {
+            "name": "stage_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{32}$",
+              "title": "Stage Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/files/{file_id}": {
+      "get": {
+        "tags": [
+          "files"
+        ],
+        "summary": "Download File",
+        "operationId": "download_file",
+        "parameters": [
+          {
+            "name": "file_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "File Id"
+            }
+          },
+          {
+            "name": "inline",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Inline"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/files/{file_id}/contents": {
+      "get": {
+        "tags": [
+          "files"
+        ],
+        "summary": "List File Contents",
+        "operationId": "list_file_contents",
+        "parameters": [
+          {
+            "name": "file_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "File Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ZipMemberOut"
+                  },
+                  "title": "Response List File Contents"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/files/{file_id}/contents/{member_path}": {
+      "get": {
+        "tags": [
+          "files"
+        ],
+        "summary": "Download File Member",
+        "operationId": "download_file_member",
+        "parameters": [
+          {
+            "name": "file_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "File Id"
+            }
+          },
+          {
+            "name": "member_path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Member Path"
+            }
+          },
+          {
+            "name": "inline",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Inline"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/gog/auth-url": {
+      "get": {
+        "tags": [
+          "gog"
+        ],
+        "summary": "Get Gog Auth Url",
+        "operationId": "get_gog_auth_url",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GogAuthUrlOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/gog/auth": {
+      "post": {
+        "tags": [
+          "gog"
+        ],
+        "summary": "Connect Gog",
+        "operationId": "connect_gog",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GogAuthRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GogStatusOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "gog"
+        ],
+        "summary": "Disconnect Gog",
+        "operationId": "disconnect_gog",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/api/v1/gog/status": {
+      "get": {
+        "tags": [
+          "gog"
+        ],
+        "summary": "Get Gog Status",
+        "operationId": "get_gog_status",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GogStatusOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/gog/library": {
+      "get": {
+        "tags": [
+          "gog"
+        ],
+        "summary": "Get Gog Library",
+        "operationId": "get_gog_library",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/OwnedGameOut"
+                  },
+                  "type": "array",
+                  "title": "Response Get Gog Library"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/gog/import": {
+      "post": {
+        "tags": [
+          "gog"
+        ],
+        "summary": "Import Gog Game",
+        "operationId": "import_gog_game",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GogImportRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobEnqueuedOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/igdb/status": {
+      "get": {
+        "tags": [
+          "igdb"
+        ],
+        "summary": "Get Igdb Status",
+        "operationId": "get_igdb_status",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IgdbStatusOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/igdb/credentials": {
+      "put": {
+        "tags": [
+          "igdb"
+        ],
+        "summary": "Connect Igdb",
+        "operationId": "connect_igdb",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IgdbCredentialsPut"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IgdbStatusOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "igdb"
+        ],
+        "summary": "Disconnect Igdb",
+        "operationId": "disconnect_igdb",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/api/v1/jobs": {
+      "get": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "List Jobs",
+        "operationId": "list_jobs",
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Opaque cursor from next_cursor.",
+              "title": "Cursor"
+            },
+            "description": "Opaque cursor from next_cursor."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "description": "Page size.",
+              "default": 50,
+              "title": "Limit"
+            },
+            "description": "Page size."
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/JobKind"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Kind"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JobStatus"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Page_Job_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/jobs/{job_id}": {
+      "get": {
+        "tags": [
+          "jobs"
+        ],
+        "summary": "Get Job",
+        "operationId": "get_job",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/identification-sources/{slug}/discover-datasets": {
+      "post": {
+        "tags": [
+          "identification"
+        ],
+        "summary": "Discover Datasets",
+        "operationId": "discover_identification_datasets",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Slug"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiscoverDatasetsOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/identification-datasets": {
+      "get": {
+        "tags": [
+          "identification"
+        ],
+        "summary": "List Datasets",
+        "operationId": "list_identification_datasets",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Dataset"
+                  },
+                  "type": "array",
+                  "title": "Response List Identification Datasets"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/identification-datasets/{dataset_id}": {
+      "patch": {
+        "tags": [
+          "identification"
+        ],
+        "summary": "Update Dataset",
+        "operationId": "update_identification_dataset",
+        "parameters": [
+          {
+            "name": "dataset_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Dataset Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatasetPatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dataset"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/identification-datasets/refresh": {
+      "post": {
+        "tags": [
+          "identification"
+        ],
+        "summary": "Refresh Datasets",
+        "operationId": "refresh_identification_datasets",
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobEnqueuedOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/identification-datasets/{dataset_id}/refresh": {
+      "post": {
+        "tags": [
+          "identification"
+        ],
+        "summary": "Refresh Dataset",
+        "operationId": "refresh_identification_dataset",
+        "parameters": [
+          {
+            "name": "dataset_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Dataset Id"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobEnqueuedOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AltNameEntry": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Name"
+          },
+          "comment": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Comment"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "AltNameEntry",
+        "description": "Alternative display name."
+      },
+      "ArtifactKind": {
+        "type": "string",
+        "enum": [
+          "installer",
+          "patch",
+          "language_pack",
+          "disc",
+          "rom",
+          "extra",
+          "save",
+          "manual",
+          "other"
+        ],
+        "title": "ArtifactKind"
+      },
+      "ArtifactOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/ArtifactKind"
+          },
+          "platform_slug": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Platform Slug"
+          },
+          "language": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language"
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Version"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ArtifactStatus"
+          },
+          "total_size": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Size"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "files": {
+            "items": {
+              "$ref": "#/components/schemas/FileOut"
+            },
+            "type": "array",
+            "title": "Files"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "platform_slug",
+          "language",
+          "version",
+          "status",
+          "total_size",
+          "name",
+          "files"
+        ],
+        "title": "ArtifactOut",
+        "description": "Artifact with its files."
+      },
+      "ArtifactStatus": {
+        "type": "string",
+        "enum": [
+          "missing",
+          "partial",
+          "stored"
+        ],
+        "title": "ArtifactStatus"
+      },
+      "AssetCandidateOut": {
+        "properties": {
+          "blake3": {
+            "type": "string",
+            "title": "Blake3"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "mime": {
+            "type": "string",
+            "title": "Mime"
+          },
+          "size": {
+            "type": "integer",
+            "title": "Size"
+          },
+          "width": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Width"
+          },
+          "height": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Height"
+          },
+          "source_slugs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Source Slugs"
+          },
+          "visible": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Visible"
+          },
+          "ordinal": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ordinal"
+          }
+        },
+        "type": "object",
+        "required": [
+          "blake3",
+          "url",
+          "mime",
+          "size",
+          "width",
+          "height",
+          "source_slugs",
+          "visible",
+          "ordinal"
+        ],
+        "title": "AssetCandidateOut",
+        "description": "One candidate image (visible/ordinal null until it is a game_asset row)."
+      },
+      "AssetKind": {
+        "type": "string",
+        "enum": [
+          "cover",
+          "background",
+          "landscape",
+          "logo",
+          "icon",
+          "screenshot",
+          "video_thumbnail"
+        ],
+        "title": "AssetKind"
+      },
+      "AssetKindPut": {
+        "properties": {
+          "blobs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Blobs"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "blobs"
+        ],
+        "title": "AssetKindPut",
+        "description": "Ordered visible set for one asset kind."
+      },
+      "Body_stage_upload": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_stage_upload"
+      },
+      "Body_upload_game_asset": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_game_asset"
+      },
+      "Dataset": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "source_slug": {
+            "type": "string",
+            "title": "Source Slug"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "enabled": {
+            "type": "boolean",
+            "title": "Enabled"
+          },
+          "dataset_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dataset Version"
+          },
+          "refreshed_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Refreshed At"
+          },
+          "signature_count": {
+            "type": "integer",
+            "title": "Signature Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "source_slug",
+          "slug",
+          "name",
+          "enabled",
+          "dataset_version",
+          "refreshed_at",
+          "signature_count"
+        ],
+        "title": "Dataset",
+        "description": "Identification dataset with its source and signature count."
+      },
+      "DatasetPatch": {
+        "properties": {
+          "enabled": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Enabled"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "DatasetPatch",
+        "description": "Dataset settings patch."
+      },
+      "DiscoverDatasetsOut": {
+        "properties": {
+          "dataset_count": {
+            "type": "integer",
+            "title": "Dataset Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "dataset_count"
+        ],
+        "title": "DiscoverDatasetsOut",
+        "description": "Dataset-discovery result."
+      },
+      "EntityOut": {
+        "properties": {
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "slug",
+          "name"
+        ],
+        "title": "EntityOut",
+        "description": "Vocabulary entity reference."
+      },
+      "ExternalIdentityOut": {
+        "properties": {
+          "source_slug": {
+            "type": "string",
+            "title": "Source Slug"
+          },
+          "external_id": {
+            "type": "string",
+            "title": "External Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source_slug",
+          "external_id"
+        ],
+        "title": "ExternalIdentityOut",
+        "description": "External catalog identity."
+      },
+      "FieldKey": {
+        "type": "string",
+        "enum": [
+          "title",
+          "sort_title",
+          "description_short",
+          "description_full",
+          "first_release_date",
+          "wrapper",
+          "game_type",
+          "developers",
+          "publishers",
+          "series",
+          "genres",
+          "themes",
+          "tags",
+          "engines",
+          "modes",
+          "platforms",
+          "release_dates",
+          "ratings",
+          "sys_requirements",
+          "alt_names",
+          "videos",
+          "cover",
+          "background",
+          "landscape",
+          "logo",
+          "icon",
+          "screenshot",
+          "video_thumbnail"
+        ],
+        "title": "FieldKey"
+      },
+      "FileHashes": {
+        "properties": {
+          "blake3": {
+            "type": "string",
+            "title": "Blake3"
+          },
+          "md5": {
+            "type": "string",
+            "title": "Md5"
+          },
+          "sha1": {
+            "type": "string",
+            "title": "Sha1"
+          },
+          "sha256": {
+            "type": "string",
+            "title": "Sha256"
+          },
+          "crc32": {
+            "type": "string",
+            "title": "Crc32"
+          }
+        },
+        "type": "object",
+        "required": [
+          "blake3",
+          "md5",
+          "sha1",
+          "sha256",
+          "crc32"
+        ],
+        "title": "FileHashes",
+        "description": "Digests computed while the upload streamed to staging."
+      },
+      "FileOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "relative_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Relative Path"
+          },
+          "size": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Size"
+          },
+          "blake3": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Blake3"
+          },
+          "matches": {
+            "items": {
+              "$ref": "#/components/schemas/SignatureMatchOut"
+            },
+            "type": "array",
+            "title": "Matches",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "relative_path",
+          "size",
+          "blake3"
+        ],
+        "title": "FileOut",
+        "description": "Stored file (matches = its derived identification matches)."
+      },
+      "FinalizeOut": {
+        "properties": {
+          "game": {
+            "$ref": "#/components/schemas/Game"
+          },
+          "identify_job_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Identify Job Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "game",
+          "identify_job_id"
+        ],
+        "title": "FinalizeOut",
+        "description": "Finalize result: the created game, plus the identify job when a signature seeded it."
+      },
+      "FinalizeRequest": {
+        "properties": {
+          "stage_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{32}$",
+            "title": "Stage Id"
+          },
+          "library_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Library Id"
+          },
+          "slug": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "title": "Slug"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Title"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/ArtifactKind"
+          },
+          "chosen_signature_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chosen Signature Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "stage_id",
+          "library_id",
+          "slug",
+          "title",
+          "kind"
+        ],
+        "title": "FinalizeRequest",
+        "description": "Finalize request: create the game + artifact from a staged file."
+      },
+      "Game": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "library_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Library Id"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "origin": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GameOrigin"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "preferred_source_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preferred Source Id"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "sort_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort Title"
+          },
+          "description_short": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description Short"
+          },
+          "description_full": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description Full"
+          },
+          "first_release_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Release Date"
+          },
+          "wrapper": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/WrapperKind"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "game_type": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "resolved_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resolved At"
+          },
+          "cover_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cover Url"
+          },
+          "landscape_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Landscape Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "library_id",
+          "slug",
+          "origin",
+          "preferred_source_id",
+          "created_at",
+          "updated_at",
+          "title",
+          "sort_title",
+          "description_short",
+          "description_full",
+          "first_release_date",
+          "wrapper",
+          "game_type",
+          "resolved_at",
+          "cover_url",
+          "landscape_url"
+        ],
+        "title": "Game",
+        "description": "Game (list shape)."
+      },
+      "GameAssetCandidates": {
+        "properties": {
+          "cover": {
+            "items": {
+              "$ref": "#/components/schemas/AssetCandidateOut"
+            },
+            "type": "array",
+            "title": "Cover"
+          },
+          "background": {
+            "items": {
+              "$ref": "#/components/schemas/AssetCandidateOut"
+            },
+            "type": "array",
+            "title": "Background"
+          },
+          "landscape": {
+            "items": {
+              "$ref": "#/components/schemas/AssetCandidateOut"
+            },
+            "type": "array",
+            "title": "Landscape"
+          },
+          "logo": {
+            "items": {
+              "$ref": "#/components/schemas/AssetCandidateOut"
+            },
+            "type": "array",
+            "title": "Logo"
+          },
+          "icon": {
+            "items": {
+              "$ref": "#/components/schemas/AssetCandidateOut"
+            },
+            "type": "array",
+            "title": "Icon"
+          },
+          "screenshot": {
+            "items": {
+              "$ref": "#/components/schemas/AssetCandidateOut"
+            },
+            "type": "array",
+            "title": "Screenshot"
+          },
+          "video_thumbnail": {
+            "items": {
+              "$ref": "#/components/schemas/AssetCandidateOut"
+            },
+            "type": "array",
+            "title": "Video Thumbnail"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cover",
+          "background",
+          "landscape",
+          "logo",
+          "icon",
+          "screenshot",
+          "video_thumbnail"
+        ],
+        "title": "GameAssetCandidates",
+        "description": "Candidate pool per asset kind, with current selection state."
+      },
+      "GameAssetsOut": {
+        "properties": {
+          "screenshots": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Screenshots"
+          }
+        },
+        "type": "object",
+        "required": [
+          "screenshots"
+        ],
+        "title": "GameAssetsOut",
+        "description": "Resolved display assets beyond the flat cover/landscape pair."
+      },
+      "GameCreate": {
+        "properties": {
+          "library_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Library Id"
+          },
+          "slug": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "title": "Slug"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Title"
+          },
+          "sort_title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort Title"
+          },
+          "description_short": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description Short"
+          },
+          "description_full": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 50000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description Full"
+          },
+          "first_release_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Release Date"
+          },
+          "wrapper": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/WrapperKind"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "game_type": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "library_id",
+          "slug",
+          "title"
+        ],
+        "title": "GameCreate",
+        "description": "Game create request."
+      },
+      "GameDetail": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "library_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Library Id"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "origin": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GameOrigin"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "preferred_source_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preferred Source Id"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "sort_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort Title"
+          },
+          "description_short": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description Short"
+          },
+          "description_full": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description Full"
+          },
+          "first_release_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Release Date"
+          },
+          "wrapper": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/WrapperKind"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "game_type": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "resolved_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resolved At"
+          },
+          "cover_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cover Url"
+          },
+          "landscape_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Landscape Url"
+          },
+          "locks": {
+            "items": {
+              "$ref": "#/components/schemas/FieldKey"
+            },
+            "type": "array",
+            "title": "Locks"
+          },
+          "artifacts": {
+            "items": {
+              "$ref": "#/components/schemas/ArtifactOut"
+            },
+            "type": "array",
+            "title": "Artifacts"
+          },
+          "assets": {
+            "$ref": "#/components/schemas/GameAssetsOut"
+          },
+          "developers": {
+            "items": {
+              "$ref": "#/components/schemas/EntityOut"
+            },
+            "type": "array",
+            "title": "Developers"
+          },
+          "publishers": {
+            "items": {
+              "$ref": "#/components/schemas/EntityOut"
+            },
+            "type": "array",
+            "title": "Publishers"
+          },
+          "series": {
+            "items": {
+              "$ref": "#/components/schemas/EntityOut"
+            },
+            "type": "array",
+            "title": "Series"
+          },
+          "genres": {
+            "items": {
+              "$ref": "#/components/schemas/EntityOut"
+            },
+            "type": "array",
+            "title": "Genres"
+          },
+          "themes": {
+            "items": {
+              "$ref": "#/components/schemas/EntityOut"
+            },
+            "type": "array",
+            "title": "Themes"
+          },
+          "tags": {
+            "items": {
+              "$ref": "#/components/schemas/EntityOut"
+            },
+            "type": "array",
+            "title": "Tags"
+          },
+          "engines": {
+            "items": {
+              "$ref": "#/components/schemas/EntityOut"
+            },
+            "type": "array",
+            "title": "Engines"
+          },
+          "modes": {
+            "items": {
+              "$ref": "#/components/schemas/EntityOut"
+            },
+            "type": "array",
+            "title": "Modes"
+          },
+          "platforms": {
+            "items": {
+              "$ref": "#/components/schemas/PlatformOut"
+            },
+            "type": "array",
+            "title": "Platforms"
+          },
+          "release_dates": {
+            "items": {
+              "$ref": "#/components/schemas/ReleaseDateEntry"
+            },
+            "type": "array",
+            "title": "Release Dates"
+          },
+          "ratings": {
+            "items": {
+              "$ref": "#/components/schemas/RatingEntry"
+            },
+            "type": "array",
+            "title": "Ratings"
+          },
+          "alt_names": {
+            "items": {
+              "$ref": "#/components/schemas/AltNameEntry"
+            },
+            "type": "array",
+            "title": "Alt Names"
+          },
+          "videos": {
+            "items": {
+              "$ref": "#/components/schemas/VideoOut"
+            },
+            "type": "array",
+            "title": "Videos"
+          },
+          "serials": {
+            "items": {
+              "$ref": "#/components/schemas/SerialEntry"
+            },
+            "type": "array",
+            "title": "Serials"
+          },
+          "external_identities": {
+            "items": {
+              "$ref": "#/components/schemas/ExternalIdentityOut"
+            },
+            "type": "array",
+            "title": "External Identities"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "library_id",
+          "slug",
+          "origin",
+          "preferred_source_id",
+          "created_at",
+          "updated_at",
+          "title",
+          "sort_title",
+          "description_short",
+          "description_full",
+          "first_release_date",
+          "wrapper",
+          "game_type",
+          "resolved_at",
+          "cover_url",
+          "landscape_url",
+          "locks",
+          "artifacts",
+          "assets",
+          "developers",
+          "publishers",
+          "series",
+          "genres",
+          "themes",
+          "tags",
+          "engines",
+          "modes",
+          "platforms",
+          "release_dates",
+          "ratings",
+          "alt_names",
+          "videos",
+          "serials",
+          "external_identities"
+        ],
+        "title": "GameDetail",
+        "description": "Full game detail."
+      },
+      "GameOrigin": {
+        "type": "string",
+        "enum": [
+          "gog_import"
+        ],
+        "title": "GameOrigin"
+      },
+      "GamePatch": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Title"
+          },
+          "sort_title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort Title"
+          },
+          "description_short": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description Short"
+          },
+          "description_full": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 50000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description Full"
+          },
+          "first_release_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Release Date"
+          },
+          "wrapper": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/WrapperKind"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "game_type": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GameType"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "preferred_source_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preferred Source Id"
+          },
+          "library_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Library Id"
+          },
+          "developers": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Developers"
+          },
+          "publishers": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Publishers"
+          },
+          "series": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Series"
+          },
+          "genres": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Genres"
+          },
+          "themes": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Themes"
+          },
+          "tags": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Tags"
+          },
+          "engines": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Engines"
+          },
+          "modes": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Modes"
+          },
+          "platforms": {
+            "items": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1
+            },
+            "type": "array",
+            "title": "Platforms"
+          },
+          "release_dates": {
+            "items": {
+              "$ref": "#/components/schemas/ReleaseDateEntry"
+            },
+            "type": "array",
+            "title": "Release Dates"
+          },
+          "ratings": {
+            "items": {
+              "$ref": "#/components/schemas/RatingEntry"
+            },
+            "type": "array",
+            "title": "Ratings"
+          },
+          "alt_names": {
+            "items": {
+              "$ref": "#/components/schemas/AltNameEntry"
+            },
+            "type": "array",
+            "title": "Alt Names"
+          },
+          "videos": {
+            "items": {
+              "$ref": "#/components/schemas/VideoPut"
+            },
+            "type": "array",
+            "title": "Videos"
+          },
+          "serials": {
+            "items": {
+              "$ref": "#/components/schemas/SerialEntry"
+            },
+            "type": "array",
+            "title": "Serials"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "GamePatch",
+        "description": "Game patch request. Collections are replace-arrays: omit = untouched,\n[] = clear; the fields typed without null reject explicit null."
+      },
+      "GameType": {
+        "type": "string",
+        "enum": [
+          "main",
+          "dlc",
+          "expansion"
+        ],
+        "title": "GameType"
+      },
+      "GogAuthRequest": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Code"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code"
+        ],
+        "title": "GogAuthRequest",
+        "description": "Auth-code exchange request."
+      },
+      "GogAuthUrlOut": {
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "url"
+        ],
+        "title": "GogAuthUrlOut",
+        "description": "GOG authorization URL."
+      },
+      "GogImportRequest": {
+        "properties": {
+          "gog_id": {
+            "type": "integer",
+            "title": "Gog Id"
+          },
+          "library_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Library Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "gog_id",
+          "library_id"
+        ],
+        "title": "GogImportRequest",
+        "description": "Import request for one owned GOG game."
+      },
+      "GogStatusOut": {
+        "properties": {
+          "connected": {
+            "type": "boolean",
+            "title": "Connected"
+          }
+        },
+        "type": "object",
+        "required": [
+          "connected"
+        ],
+        "title": "GogStatusOut",
+        "description": "GOG connection status."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Health": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "const": "ok",
+            "title": "Status",
+            "default": "ok"
+          }
+        },
+        "type": "object",
+        "title": "Health",
+        "description": "Service health."
+      },
+      "IdentityPut": {
+        "properties": {
+          "external_id": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "External Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "external_id"
+        ],
+        "title": "IdentityPut",
+        "description": "Set a game's identity in one external catalog."
+      },
+      "IgdbCredentialsPut": {
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Client Id"
+          },
+          "client_secret": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Client Secret"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "client_id",
+          "client_secret"
+        ],
+        "title": "IgdbCredentialsPut",
+        "description": "Twitch developer-app credentials for IGDB."
+      },
+      "IgdbStatusOut": {
+        "properties": {
+          "connected": {
+            "type": "boolean",
+            "title": "Connected"
+          }
+        },
+        "type": "object",
+        "required": [
+          "connected"
+        ],
+        "title": "IgdbStatusOut",
+        "description": "IGDB connection status."
+      },
+      "Job": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/JobKind"
+          },
+          "status": {
+            "$ref": "#/components/schemas/JobStatus"
+          },
+          "payload": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Payload"
+          },
+          "progress": {
+            "$ref": "#/components/schemas/JobProgress"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Result"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "status",
+          "payload",
+          "progress",
+          "result",
+          "error",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "Job",
+        "description": "Job with kind-typed JSON payload/result (typed per kind client-side)."
+      },
+      "JobEnqueuedOut": {
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Job Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "job_id"
+        ],
+        "title": "JobEnqueuedOut",
+        "description": "Reference to a queued job."
+      },
+      "JobKind": {
+        "type": "string",
+        "enum": [
+          "gog_import",
+          "fetch_metadata",
+          "renormalize_metadata",
+          "refresh_identification_dataset",
+          "refresh_identification_datasets",
+          "identify_game"
+        ],
+        "title": "JobKind"
+      },
+      "JobProgress": {
+        "properties": {
+          "stages": {
+            "items": {
+              "$ref": "#/components/schemas/JobStage"
+            },
+            "type": "array",
+            "title": "Stages",
+            "default": []
+          }
+        },
+        "type": "object",
+        "title": "JobProgress",
+        "description": "Staged job progress."
+      },
+      "JobStage": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "group": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Group"
+          },
+          "status": {
+            "$ref": "#/components/schemas/JobStageStatus",
+            "default": "pending"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "bytes_done": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bytes Done"
+          },
+          "bytes_total": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bytes Total"
+          }
+        },
+        "type": "object",
+        "required": [
+          "key",
+          "label"
+        ],
+        "title": "JobStage",
+        "description": "One stage of a job's typed progress."
+      },
+      "JobStageStatus": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "running",
+          "completed",
+          "failed"
+        ],
+        "title": "JobStageStatus"
+      },
+      "JobStatus": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "running",
+          "completed",
+          "failed",
+          "interrupted"
+        ],
+        "title": "JobStatus"
+      },
+      "Library": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "slug",
+          "name",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "Library",
+        "description": "Game library."
+      },
+      "LibraryCreate": {
+        "properties": {
+          "slug": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "title": "Slug"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "slug",
+          "name"
+        ],
+        "title": "LibraryCreate",
+        "description": "Library create request."
+      },
+      "LibraryPatch": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "LibraryPatch",
+        "description": "Library patch request."
+      },
+      "MetadataSource": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "enabled": {
+            "type": "boolean",
+            "title": "Enabled"
+          },
+          "required": {
+            "type": "boolean",
+            "title": "Required"
+          },
+          "priority": {
+            "type": "integer",
+            "title": "Priority"
+          },
+          "request_interval_ms": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Interval Ms"
+          },
+          "searchable": {
+            "type": "boolean",
+            "title": "Searchable",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "slug",
+          "name",
+          "enabled",
+          "required",
+          "priority",
+          "request_interval_ms"
+        ],
+        "title": "MetadataSource",
+        "description": "Metadata source registry entry."
+      },
+      "MetadataSourcePatch": {
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "title": "Enabled"
+          },
+          "priority": {
+            "type": "integer",
+            "title": "Priority",
+            "ge": 0
+          },
+          "request_interval_ms": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Interval Ms"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "MetadataSourcePatch",
+        "description": "Metadata source patch request."
+      },
+      "OwnedGameOut": {
+        "properties": {
+          "gog_id": {
+            "type": "integer",
+            "title": "Gog Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Image Url"
+          },
+          "imported": {
+            "type": "boolean",
+            "title": "Imported"
+          },
+          "complete": {
+            "type": "boolean",
+            "title": "Complete"
+          }
+        },
+        "type": "object",
+        "required": [
+          "gog_id",
+          "title",
+          "slug",
+          "image_url",
+          "imported",
+          "complete"
+        ],
+        "title": "OwnedGameOut",
+        "description": "An owned GOG game, flagged when it's already in the library."
+      },
+      "Page_Game_": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Game"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Cursor"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items"
+        ],
+        "title": "Page[Game]"
+      },
+      "Page_Job_": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Job"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Cursor"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items"
+        ],
+        "title": "Page[Job]"
+      },
+      "Page_Library_": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Library"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Cursor"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items"
+        ],
+        "title": "Page[Library]"
+      },
+      "PlatformOut": {
+        "properties": {
+          "slug": {
+            "type": "string",
+            "title": "Slug"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "family_slug": {
+            "type": "string",
+            "title": "Family Slug"
+          }
+        },
+        "type": "object",
+        "required": [
+          "slug",
+          "name",
+          "family_slug"
+        ],
+        "title": "PlatformOut",
+        "description": "Platform with its family."
+      },
+      "RatingAuthority": {
+        "type": "string",
+        "enum": [
+          "esrb",
+          "pegi",
+          "usk",
+          "cero",
+          "acb",
+          "classind",
+          "grac",
+          "csrr",
+          "igrs"
+        ],
+        "title": "RatingAuthority"
+      },
+      "RatingEntry": {
+        "properties": {
+          "authority": {
+            "$ref": "#/components/schemas/RatingAuthority"
+          },
+          "value": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Value"
+          },
+          "descriptors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Descriptors",
+            "default": []
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "authority",
+          "value"
+        ],
+        "title": "RatingEntry",
+        "description": "One authority's age rating."
+      },
+      "ReleaseDateEntry": {
+        "properties": {
+          "platform": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Platform"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "title": "Date"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "platform",
+          "date"
+        ],
+        "title": "ReleaseDateEntry",
+        "description": "Per-platform release date."
+      },
+      "SearchCandidateOut": {
+        "properties": {
+          "external_id": {
+            "type": "string",
+            "title": "External Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Year"
+          }
+        },
+        "type": "object",
+        "required": [
+          "external_id",
+          "name",
+          "year"
+        ],
+        "title": "SearchCandidateOut",
+        "description": "One catalog-search candidate."
+      },
+      "SecretPut": {
+        "properties": {
+          "value": {
+            "type": "string",
+            "maxLength": 10000,
+            "minLength": 1,
+            "title": "Value"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "title": "SecretPut",
+        "description": "Secret put request."
+      },
+      "SerialEntry": {
+        "properties": {
+          "value": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Value"
+          },
+          "comment": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Comment"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "title": "SerialEntry",
+        "description": "Serial number row."
+      },
+      "SignatureMatchOut": {
+        "properties": {
+          "signature_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Signature Id"
+          },
+          "game_name": {
+            "type": "string",
+            "title": "Game Name"
+          },
+          "file_name": {
+            "type": "string",
+            "title": "File Name"
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category"
+          },
+          "dataset_name": {
+            "type": "string",
+            "title": "Dataset Name"
+          },
+          "source_slug": {
+            "type": "string",
+            "title": "Source Slug"
+          }
+        },
+        "type": "object",
+        "required": [
+          "signature_id",
+          "game_name",
+          "file_name",
+          "category",
+          "dataset_name",
+          "source_slug"
+        ],
+        "title": "SignatureMatchOut",
+        "description": "A file's identification-signature match (derived)."
+      },
+      "StageOut": {
+        "properties": {
+          "stage_id": {
+            "type": "string",
+            "title": "Stage Id"
+          },
+          "filename": {
+            "type": "string",
+            "title": "Filename"
+          },
+          "size": {
+            "type": "integer",
+            "title": "Size"
+          },
+          "hashes": {
+            "$ref": "#/components/schemas/FileHashes"
+          },
+          "suggested_slug": {
+            "type": "string",
+            "title": "Suggested Slug"
+          },
+          "suggested_kind": {
+            "$ref": "#/components/schemas/ArtifactKind"
+          },
+          "matches": {
+            "items": {
+              "$ref": "#/components/schemas/SignatureMatchOut"
+            },
+            "type": "array",
+            "title": "Matches"
+          }
+        },
+        "type": "object",
+        "required": [
+          "stage_id",
+          "filename",
+          "size",
+          "hashes",
+          "suggested_slug",
+          "suggested_kind",
+          "matches"
+        ],
+        "title": "StageOut",
+        "description": "Staged upload."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VideoOut": {
+        "properties": {
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "video_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Video Id"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "provider",
+          "url",
+          "video_id",
+          "name"
+        ],
+        "title": "VideoOut",
+        "description": "External video."
+      },
+      "VideoPut": {
+        "properties": {
+          "provider": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Provider"
+          },
+          "url": {
+            "type": "string",
+            "maxLength": 2048,
+            "minLength": 1,
+            "title": "Url"
+          },
+          "video_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Video Id"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "provider",
+          "url"
+        ],
+        "title": "VideoPut",
+        "description": "Video entry as writable via PATCH (a URL is required)."
+      },
+      "WrapperKind": {
+        "type": "string",
+        "enum": [
+          "dosbox",
+          "scummvm"
+        ],
+        "title": "WrapperKind"
+      },
+      "ZipMemberOut": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "title": "Path"
+          },
+          "size": {
+            "type": "integer",
+            "title": "Size"
+          }
+        },
+        "type": "object",
+        "required": [
+          "path",
+          "size"
+        ],
+        "title": "ZipMemberOut",
+        "description": "One member of a stored zip file."
+      }
+    }
+  }
+}

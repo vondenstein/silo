@@ -1,0 +1,52 @@
+[project]
+name = "silo"
+version = "0.1.0"
+description = "Self-hosted game library manager"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115",
+    "sqlalchemy[asyncio]>=2.0",
+    "aiosqlite>=0.20",
+    "alembic>=1.14",
+    "pydantic-settings>=2.14.1",
+    "blake3>=1.0.9",
+    "nh3>=0.3.6",
+    "pillow>=12.3.0",
+    "beautifulsoup4>=4.15.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "httpx>=0.28",
+    "ruff>=0.8",
+    "ty>=0.0.25",
+    "pytest-cov>=7.1.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "--cov --cov-report=term-missing"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+extend-exclude = ["alembic/versions"]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.coverage.run]
+source = ["silo"]
+omit = ["silo/main.py"]
+concurrency = ["greenlet"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+
+[tool.fastapi]
+entrypoint = "silo.main:app"

@@ -1,0 +1,13 @@
+.git
+.github
+.bruno
+.vscode
+.ruff_cache
+docs
+scripts
+web/node_modules
+web/dist
+**/__pycache__
+**/.venv
+*.db
+*.tsbuildinfo
