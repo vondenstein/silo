@@ -1,0 +1,1479 @@
+{
+  "inDevelopment": {
+    "active": false
+  },
+  "copyrights": "CD PROJEKT®, Cyberpunk®, Cyberpunk 2077® are registered trademarks of CD PROJEKT S.A. ©\nCD PROJEKT S.A. All rights reserved. All other copyrights and trademarks are the property of their\nrespective owners.",
+  "isUsingDosBox": false,
+  "releaseStatus": "default",
+  "description": "<a href=\"https://www.gog.com/game/cyberpunk_2077_ultimate_edition\"><img src=\"https://items.gog.com/not_a_cp_pl/ENG_1540X400_bundle_banner_cyberpunk_phantom_liberty.png\"></a>\n<br><hr>\n\n\n\n\n<img src=\"https://items.gog.com/not_a_cp/addon_en.png\"><hr><br>\n\n\n\n<p><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_01_EN_v2.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_03_EN.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_04_EN.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_05_EN.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_06_EN.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_07_EN.webm\" type=\"video/webm\"></video></p>\n\n<br>\n<hr><img src=\"https://items.gog.com/not_a_cp/awards/Prev_Awards_CP_AwardSection.png\">\n<hr>\n\n* Exclusive Digital Comic - Cyberpunk 2077: Big City Dreams is available in English only.",
+  "size": 0,
+  "overview": "<a href=\"https://www.gog.com/game/cyberpunk_2077_ultimate_edition\"><img src=\"https://items.gog.com/not_a_cp_pl/ENG_1540X400_bundle_banner_cyberpunk_phantom_liberty.png\"></a>\n<br><hr>\n\n\n\n\n<img src=\"https://items.gog.com/not_a_cp/addon_en.png\"><hr><br>\n\n\n\n<p><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_01_EN_v2.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_03_EN.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_04_EN.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_05_EN.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_06_EN.webm\" type=\"video/webm\"></video><video muted=\"\" loop=\"\" preload=\"auto\" autoplay=\"autoplay\" style=\"margin: auto;display:block;width:100%\"><source src=\"https://items.gog.com/not_a_cp_pl/CP77_GOG_07_EN.webm\" type=\"video/webm\"></video></p>\n\n<br>\n<hr><img src=\"https://items.gog.com/not_a_cp/awards/Prev_Awards_CP_AwardSection.png\">\n<hr>\n\n* Exclusive Digital Comic - Cyberpunk 2077: Big City Dreams is available in English only.",
+  "featuresDescription": "",
+  "additionalRequirements": "<b>WARNING: RISK OF SEIZURE</b><br>\nIn this game you will encounter a variety of visual effects (e.g. flashing lights during braindance sequences) that may provoke seizures or loss of consciousness in a minority of people. If you or someone in your family has ever displayed symptoms of epilepsy in the presence of flashing lights, please consult your physician before playing Cyberpunk 2077. If you or someone you know experiences any of the above symptoms while playing, stop and seek medical attention immediately. ",
+  "_links": {
+    "self": {
+      "href": "https://api.gog.com/v2/games/2093619782?locale=en-US"
+    },
+    "store": {
+      "href": "https://www.gog.com/en/game/cyberpunk_2077"
+    },
+    "support": {
+      "href": "https://www.gog.com/support/cyberpunk_2077"
+    },
+    "forum": {
+      "href": "https://www.gog.com/forum/cyberpunk_2077"
+    },
+    "icon": {
+      "href": "https://images.gog-statics.com/274a8224226cfbd2f911ac15f55f8ff00ee62725c35ad4546786c63c82370b60.png"
+    },
+    "iconSquare": {
+      "href": "https://images.gog-statics.com/cdbe2ec861149ade284d8e81ba43869b9e33b6c22f09730373ab7bd0790c69d1.png"
+    },
+    "logo": {
+      "href": "https://images.gog-statics.com/d7178b692f8a605a6f3f67f27eadecc8e11282f5005c145e402d47f343dc2925.png"
+    },
+    "boxArtImage": {
+      "href": "https://images.gog-statics.com/95092abc6bf9e143242b9c5400aa09cb681962c73439c8ebc436aaebcd73b5ea.jpg"
+    },
+    "backgroundImage": {
+      "href": "https://images.gog-statics.com/7d3b143e66ec35ca7bae2842e4bf83e701ee10fcb26c470bc217f9757c6038a8.jpg"
+    },
+    "galaxyBackgroundImage": {
+      "href": "https://images.gog-statics.com/b17f4cd9fb517ee48cebbf8fb6ab71482529194105c6b849c20bdaec2a06d349.jpg"
+    },
+    "includesGames": [
+      {
+        "href": "https://api.gog.com/v2/games/1423049311?locale=en-US"
+      }
+    ]
+  },
+  "_embedded": {
+    "product": {
+      "isAvailableForSale": true,
+      "isVisibleInCatalog": true,
+      "isPreorder": false,
+      "isVisibleInAccount": true,
+      "id": 2093619782,
+      "title": "Cyberpunk 2077",
+      "isInstallable": true,
+      "globalReleaseDate": "2020-12-10T00:00:00+01:00",
+      "hasProductCard": true,
+      "gogReleaseDate": "2020-12-10T00:54:00+01:00",
+      "category": "PACK",
+      "hasPatrons": false,
+      "hasHowLongToBeatInformation": true,
+      "hasDreamlistStories": true,
+      "hasOpenCriticInformation": true,
+      "hasFaqInformation": true,
+      "isSecret": true,
+      "_links": {
+        "image": {
+          "href": "https://images.gog-statics.com/c75e674590b8947542c809924df30bbef2190341163dd08668e243c266be70c5_{formatter}.png",
+          "templated": true,
+          "formatters": [
+            "800",
+            "1600",
+            "glx_logo",
+            "glx_logo_2x",
+            "product_630",
+            "product_630_2x"
+          ]
+        },
+        "checkout": {
+          "href": "https://www.gog.com/en/checkout/manual/2093619782"
+        },
+        "prices": {
+          "href": "https://api.gog.com/products/2093619782/prices?countryCode={country}",
+          "templated": true
+        }
+      }
+    },
+    "productType": "PACK",
+    "localizations": [
+      {
+        "_embedded": {
+          "language": {
+            "code": "ar",
+            "name": "Arabic"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "br",
+            "name": "Portuguese (Brazilian)"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "br",
+            "name": "Portuguese (Brazilian)"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "cn",
+            "name": "Chinese Simplified"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "cn",
+            "name": "Chinese Simplified"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "cz",
+            "name": "Czech"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "de",
+            "name": "German"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "de",
+            "name": "German"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "en",
+            "name": "English"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "en",
+            "name": "English"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "es",
+            "name": "Spanish"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "es",
+            "name": "Spanish"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "es_mx",
+            "name": "Latin American Spanish"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "fr",
+            "name": "French"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "fr",
+            "name": "French"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "hu",
+            "name": "Hungarian"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "it",
+            "name": "Italian"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "it",
+            "name": "Italian"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "jp",
+            "name": "Japanese"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "jp",
+            "name": "Japanese"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "ko",
+            "name": "Korean"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "ko",
+            "name": "Korean"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "pl",
+            "name": "Polish"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "pl",
+            "name": "Polish"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "ru",
+            "name": "Russian"
+          },
+          "localizationScope": {
+            "type": "audio"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "ru",
+            "name": "Russian"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "th",
+            "name": "Thai"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "tr",
+            "name": "Turkish"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "uk",
+            "name": "Ukrainian"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "_embedded": {
+          "language": {
+            "code": "zh",
+            "name": "Chinese Traditional"
+          },
+          "localizationScope": {
+            "type": "text"
+          }
+        }
+      }
+    ],
+    "videos": [
+      {
+        "provider": "youtube",
+        "videoId": "UIE1JjNOqHM",
+        "thumbnailId": "UIE1JjNOqHM",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/UIE1JjNOqHM?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/UIE1JjNOqHM/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "fDYWXGAzJGw",
+        "thumbnailId": "fDYWXGAzJGw",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/fDYWXGAzJGw?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/fDYWXGAzJGw/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "jb_XVSi3Lw4",
+        "thumbnailId": "jb_XVSi3Lw4",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/jb_XVSi3Lw4?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/jb_XVSi3Lw4/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "Em5QKW36MKM",
+        "thumbnailId": "Em5QKW36MKM",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/Em5QKW36MKM?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/Em5QKW36MKM/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "a95bbUKhjz8",
+        "thumbnailId": "a95bbUKhjz8",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/a95bbUKhjz8?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/a95bbUKhjz8/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "sTWdtZULC38",
+        "thumbnailId": "sTWdtZULC38",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/sTWdtZULC38?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/sTWdtZULC38/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "zrHb2p4YPT0",
+        "thumbnailId": "zrHb2p4YPT0",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/zrHb2p4YPT0?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/zrHb2p4YPT0/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "F3HJ7reZLDM",
+        "thumbnailId": "F3HJ7reZLDM",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/F3HJ7reZLDM?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/F3HJ7reZLDM/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "ckbeFk0LzaM",
+        "thumbnailId": "ckbeFk0LzaM",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/ckbeFk0LzaM?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/ckbeFk0LzaM/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "8TM2nAYyHE0",
+        "thumbnailId": "8TM2nAYyHE0",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/8TM2nAYyHE0?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/8TM2nAYyHE0/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "ml8vZ9GF9iM",
+        "thumbnailId": "ml8vZ9GF9iM",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/ml8vZ9GF9iM?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/ml8vZ9GF9iM/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "7Lhw_0jDwqU",
+        "thumbnailId": "7Lhw_0jDwqU",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/7Lhw_0jDwqU?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/7Lhw_0jDwqU/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "fy4AWGOmSio",
+        "thumbnailId": "fy4AWGOmSio",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/fy4AWGOmSio?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/fy4AWGOmSio/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "iQZjA41MtL8",
+        "thumbnailId": "iQZjA41MtL8",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/iQZjA41MtL8?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/iQZjA41MtL8/hqdefault.jpg"
+          }
+        }
+      },
+      {
+        "provider": "youtube",
+        "videoId": "oYmBVQp84HA",
+        "thumbnailId": "oYmBVQp84HA",
+        "_links": {
+          "self": {
+            "href": "https://www.youtube.com/embed/oYmBVQp84HA?wmode=opaque&rel=0"
+          },
+          "thumbnail": {
+            "href": "https://img.youtube.com/vi/oYmBVQp84HA/hqdefault.jpg"
+          }
+        }
+      }
+    ],
+    "bonuses": [],
+    "screenshots": [
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/06ec2f91e7f4a4b372c947307da3a6814b1c190be3fc1f4535ed9c2049c13dae_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/1b6963d25e96ca334bd3a2f85cb2899c252403b63d84e65835427d4df4ddb86a_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/8e558ade20ae8710c765d65f30fa549000eccb7491504425c568ceea844755bf_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/40f995ffffa8f902b740990e01b51d8252aa232ba171c7ddc008c076d779ee7e_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/9d3d36f44e3496d5072e5eda1a99828f5636af11ead0558b634fb7075ba17863_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/0f12b91b0c4613ecffd6815d3dff17eac2fbe21310600ed0f2f10d640f478eae_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/bb0d4e9ebbfa88201e73842fb87af7703d880862f8a01498cbd4a66bdf355c60_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/73aaf4c34c2736f8e35cca5b9697d499a6c842f58a8c3dd0c5e01d4a7fb4b860_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/424a223577daebdb102dd5f1c2ef096f93df58e5e51051d42c183e711c2d97ea_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/bf8e70f4f45cce1da992ad01697ea61cf0fbe3c30f34e7be4fb588aa77139c4e_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/51edac89816483f066d4040c2d0e8c4c80b84c3f56df0167939ffb87c769556c_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/63bb90a5dc06df0530fd85c1ac057527de6ef2653249e3b2f958316602cb4370_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/c54dc68aaa570133b3500f79ddafabe50ee61b9cba42be1efba14269d360c1b8_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/ade6234e24668efeb1b1f2277b9116631654cf36a1fd29aa577d23e9d286911b_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/35dc87094b8b67bf3cf7b094166700e584612d2b14b786475b3b1ef1b7292e32_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/e8b6046cdd1a87621799867737a293e31ef209ca66eed4421a2cd6ea0c681076_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/67a2f65e8135b8def0c5ad73ea623f5c34ded20d8dcadc514ac51e47bed9525a_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/b362735b88df5f3c4cb8518fc93fde52dfaaf50b7ca26c052923a90e31c71303_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/4b295d49002ea6b2e3d63b523cc29bfcf3b27cb1ce8ba409ebb980db9f77692a_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/e1baeeb32e4968fcfa62baea9b20b6051dc9860b33128bc091b59b7fbd05b1b6_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/ea1d80d5d59efd630d1c8531315d72549812d592bc8decc7d1e86940ec3d48c7_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://images.gog-statics.com/1c660db41f82ea22de02cf718057121050103306dca9b1bb48aaf0fe0c355eee_{formatter}.jpg",
+            "templated": true,
+            "formatters": [
+              "product_card_screenshot_112",
+              "product_card_screenshot_748",
+              "product_card_screenshot_748_2x",
+              "1600"
+            ]
+          }
+        }
+      }
+    ],
+    "publisher": {
+      "name": "CD PROJEKT RED"
+    },
+    "publishers": [
+      {
+        "name": "CD PROJEKT RED"
+      }
+    ],
+    "developers": [
+      {
+        "name": "CD PROJEKT RED"
+      }
+    ],
+    "supportedOperatingSystems": [
+      {
+        "operatingSystem": {
+          "name": "windows",
+          "versions": "Windows"
+        },
+        "systemRequirements": [
+          {
+            "type": "minimum",
+            "description": "",
+            "requirements": [
+              {
+                "id": "system",
+                "name": "System:",
+                "description": "64-bit Windows 10"
+              },
+              {
+                "id": "processor",
+                "name": "Processor:",
+                "description": "Core i7-6700 or Ryzen 5 1600"
+              },
+              {
+                "id": "memory",
+                "name": "Memory:",
+                "description": "12 GB RAM"
+              },
+              {
+                "id": "graphics",
+                "name": "Graphics:",
+                "description": "GeForce GTX 1060 6GB or Radeon RX 580 8GB or Arc A380"
+              },
+              {
+                "id": "directx",
+                "name": "DirectX:",
+                "description": "Version 12"
+              },
+              {
+                "id": "storage",
+                "name": "Storage:",
+                "description": "70 GB SSD"
+              }
+            ]
+          },
+          {
+            "type": "recommended",
+            "description": "",
+            "requirements": [
+              {
+                "id": "system",
+                "name": "System:",
+                "description": "64-bit Windows 10"
+              },
+              {
+                "id": "memory",
+                "name": "Memory:",
+                "description": "16 GB RAM"
+              },
+              {
+                "id": "graphics",
+                "name": "Graphics:",
+                "description": "GeForce RTX 2060 SUPER or Radeon RX 5700 or Arc A770"
+              },
+              {
+                "id": "directx",
+                "name": "DirectX:",
+                "description": "Version 12"
+              },
+              {
+                "id": "storage",
+                "name": "Storage:",
+                "description": "70 GB SSD"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "operatingSystem": {
+          "name": "osx",
+          "versions": "Mac OS X"
+        },
+        "systemRequirements": [
+          {
+            "type": "minimum",
+            "description": "",
+            "requirements": [
+              {
+                "id": "system",
+                "name": "System:",
+                "description": "15.5 or later"
+              },
+              {
+                "id": "processor",
+                "name": "Processor:",
+                "description": "M1"
+              },
+              {
+                "id": "memory",
+                "name": "Memory:",
+                "description": "16 GB RAM"
+              },
+              {
+                "id": "storage",
+                "name": "Storage:",
+                "description": "92 GB available space"
+              }
+            ]
+          },
+          {
+            "type": "recommended",
+            "description": "",
+            "requirements": [
+              {
+                "id": "system",
+                "name": "System:",
+                "description": "15.5 or later"
+              },
+              {
+                "id": "processor",
+                "name": "Processor:",
+                "description": "M3 Pro"
+              },
+              {
+                "id": "memory",
+                "name": "Memory:",
+                "description": "18 GB RAM"
+              },
+              {
+                "id": "storage",
+                "name": "Storage:",
+                "description": "92 GB available space"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "tags": [
+      {
+        "id": 57,
+        "name": "Role-playing",
+        "level": 1,
+        "slug": "rpg"
+      },
+      {
+        "id": 64,
+        "name": "Action",
+        "level": 2,
+        "slug": "action"
+      },
+      {
+        "id": 72,
+        "name": "Sci-fi",
+        "level": 3,
+        "slug": "scifi"
+      }
+    ],
+    "properties": [
+      {
+        "name": "Action",
+        "slug": "action"
+      },
+      {
+        "name": "Story Rich",
+        "slug": "story-rich"
+      },
+      {
+        "name": "Atmospheric",
+        "slug": "atmospheric"
+      },
+      {
+        "name": "Role-playing",
+        "slug": "role-playing"
+      },
+      {
+        "name": "Sci-fi",
+        "slug": "sci-fi"
+      },
+      {
+        "name": "Science",
+        "slug": "science"
+      },
+      {
+        "name": "First-Person",
+        "slug": "first-person"
+      },
+      {
+        "name": "Great Soundtrack",
+        "slug": "great-soundtrack"
+      },
+      {
+        "name": "Choices Matter",
+        "slug": "choices-matter"
+      },
+      {
+        "name": "Open World",
+        "slug": "open-world"
+      },
+      {
+        "name": "Mature",
+        "slug": "mature"
+      },
+      {
+        "name": "Nudity",
+        "slug": "nudity"
+      },
+      {
+        "name": "Violent",
+        "slug": "violent"
+      },
+      {
+        "name": "Multiple Endings",
+        "slug": "multiple-endings"
+      },
+      {
+        "name": "FPS",
+        "slug": "fps"
+      },
+      {
+        "name": "Cyberpunk",
+        "slug": "cyberpunk"
+      }
+    ],
+    "esrbRating": {
+      "category": {
+        "name": "Mature 17+",
+        "id": 18
+      },
+      "contentDescriptors": [
+        {
+          "descriptor": "Intense Violence",
+          "id": 26
+        },
+        {
+          "descriptor": "Blood and Gore",
+          "id": 31
+        },
+        {
+          "descriptor": "Strong Sexual Content",
+          "id": 36
+        },
+        {
+          "descriptor": "Nudity",
+          "id": 38
+        },
+        {
+          "descriptor": "Strong Language",
+          "id": 46
+        },
+        {
+          "descriptor": "Use of Drugs and Alcohol",
+          "id": 57
+        }
+      ],
+      "ageRating": 17
+    },
+    "pegiRating": {
+      "ageRating": 18,
+      "contentDescriptors": [
+        {
+          "descriptor": "Bad Language"
+        },
+        {
+          "descriptor": "Sex"
+        },
+        {
+          "descriptor": "Violence"
+        }
+      ]
+    },
+    "uskRating": {
+      "ageRating": 18,
+      "category": {
+        "name": "Not approved for young persons aged under 18"
+      }
+    },
+    "brRating": {
+      "ageRating": 18,
+      "contentDescriptors": [
+        {
+          "descriptor": "Conteúdo Sexual\r"
+        },
+        {
+          "descriptor": "Drogas\r"
+        },
+        {
+          "descriptor": "Violência Extrema\r"
+        }
+      ]
+    },
+    "gogRating": {
+      "ageRating": 18
+    },
+    "features": [
+      {
+        "name": "Achievements",
+        "id": "achievements"
+      },
+      {
+        "name": "Cloud saves",
+        "id": "cloud_saves"
+      },
+      {
+        "name": "Controller support",
+        "id": "controller_support"
+      },
+      {
+        "name": "Overlay",
+        "id": "overlay"
+      },
+      {
+        "name": "Single-player",
+        "id": "single"
+      }
+    ],
+    "editions": [
+      {
+        "id": 2093619782,
+        "name": "Base Edition",
+        "bonuses": [
+          {
+            "id": 87256,
+            "name": "Soundtrack (WAV)",
+            "type": {
+              "name": "audio",
+              "slug": "audio"
+            }
+          },
+          {
+            "id": 87259,
+            "name": "Soundtrack (MP3)",
+            "type": {
+              "name": "audio",
+              "slug": "audio"
+            }
+          },
+          {
+            "id": 87262,
+            "name": "Soundtrack (FLAC)",
+            "type": {
+              "name": "audio",
+              "slug": "audio"
+            }
+          },
+          {
+            "id": 87265,
+            "name": "Cyberpunk 2077 Sourcebook (English)",
+            "type": {
+              "name": "guides & reference",
+              "slug": "guides-reference"
+            }
+          },
+          {
+            "id": 87268,
+            "name": "Cyberpunk 2077 Sourcebook (Polish)",
+            "type": {
+              "name": "guides & reference",
+              "slug": "guides-reference"
+            }
+          },
+          {
+            "id": 87271,
+            "name": "wallpapers (en)",
+            "type": {
+              "name": "wallpapers",
+              "slug": "wallpapers"
+            }
+          },
+          {
+            "id": 87286,
+            "name": "Cyberpunk 2077: Big City Dreams - Digital Comic",
+            "type": {
+              "name": "artworks",
+              "slug": "artworks"
+            }
+          },
+          {
+            "id": 87289,
+            "name": "Avatars",
+            "type": {
+              "name": "avatars",
+              "slug": "avatars"
+            }
+          },
+          {
+            "id": 87292,
+            "name": "Posters",
+            "type": {
+              "name": "artworks",
+              "slug": "artworks"
+            }
+          },
+          {
+            "id": 95863,
+            "name": "Cyberpunk 2077 Legacy 1.63",
+            "type": {
+              "name": "game add-ons",
+              "slug": "game-add-ons"
+            }
+          },
+          {
+            "id": 99065,
+            "name": "Cyberpunk RED Easy Mode Guide",
+            "type": {
+              "name": "guides & reference",
+              "slug": "guides-reference"
+            }
+          }
+        ],
+        "hasProductCard": true,
+        "_links": {
+          "self": {
+            "href": "https://www.gog.com/en/game/cyberpunk_2077"
+          },
+          "prices": {
+            "href": "https://api.gog.com/products/2093619782/prices?countryCode={country}",
+            "templated": true
+          }
+        }
+      },
+      {
+        "id": 1274966284,
+        "name": "Ultimate Edition",
+        "bonuses": [
+          {
+            "id": 99772,
+            "name": "Cyberpunk 2077: Phantom Liberty",
+            "type": {
+              "name": "game add-ons",
+              "slug": "game-add-ons"
+            }
+          },
+          {
+            "id": 87256,
+            "name": "Soundtrack (WAV)",
+            "type": {
+              "name": "audio",
+              "slug": "audio"
+            }
+          },
+          {
+            "id": 87259,
+            "name": "Soundtrack (MP3)",
+            "type": {
+              "name": "audio",
+              "slug": "audio"
+            }
+          },
+          {
+            "id": 87262,
+            "name": "Soundtrack (FLAC)",
+            "type": {
+              "name": "audio",
+              "slug": "audio"
+            }
+          },
+          {
+            "id": 87265,
+            "name": "Cyberpunk 2077 Sourcebook (English)",
+            "type": {
+              "name": "guides & reference",
+              "slug": "guides-reference"
+            }
+          },
+          {
+            "id": 87268,
+            "name": "Cyberpunk 2077 Sourcebook (Polish)",
+            "type": {
+              "name": "guides & reference",
+              "slug": "guides-reference"
+            }
+          },
+          {
+            "id": 87271,
+            "name": "wallpapers (en)",
+            "type": {
+              "name": "wallpapers",
+              "slug": "wallpapers"
+            }
+          },
+          {
+            "id": 87286,
+            "name": "Cyberpunk 2077: Big City Dreams - Digital Comic",
+            "type": {
+              "name": "artworks",
+              "slug": "artworks"
+            }
+          },
+          {
+            "id": 87289,
+            "name": "Avatars",
+            "type": {
+              "name": "avatars",
+              "slug": "avatars"
+            }
+          },
+          {
+            "id": 87292,
+            "name": "Posters",
+            "type": {
+              "name": "artworks",
+              "slug": "artworks"
+            }
+          },
+          {
+            "id": 95863,
+            "name": "Cyberpunk 2077 Legacy 1.63",
+            "type": {
+              "name": "game add-ons",
+              "slug": "game-add-ons"
+            }
+          },
+          {
+            "id": 99065,
+            "name": "Cyberpunk RED Easy Mode Guide",
+            "type": {
+              "name": "guides & reference",
+              "slug": "guides-reference"
+            }
+          }
+        ],
+        "hasProductCard": true,
+        "_links": {
+          "self": {
+            "href": "https://www.gog.com/en/game/cyberpunk_2077_ultimate_edition"
+          },
+          "prices": {
+            "href": "https://api.gog.com/products/1274966284/prices?countryCode={country}",
+            "templated": true
+          }
+        }
+      }
+    ]
+  }
+}

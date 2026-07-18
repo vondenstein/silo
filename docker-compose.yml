@@ -1,0 +1,14 @@
+services:
+  silo:
+    image: ghcr.io/vondenstein/silo:latest
+    # build:
+    #   context: .
+    ports:
+      - "9550:9550"
+    volumes:
+      - /tmp/silo-dev/games:/games
+      - /tmp/silo-dev/data:/data
+    restart: unless-stopped
+
+volumes:
+  silo-data:

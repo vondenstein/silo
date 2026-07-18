@@ -1,0 +1,461 @@
+{
+  "id": 589,
+  "age_ratings": [
+    {
+      "id": 124167,
+      "organization": {
+        "id": 6,
+        "name": "CLASS_IND"
+      },
+      "rating_category": {
+        "id": 31,
+        "rating": "14"
+      }
+    },
+    {
+      "id": 11652,
+      "organization": {
+        "id": 2,
+        "name": "PEGI"
+      },
+      "rating_category": {
+        "id": 10,
+        "rating": "12"
+      },
+      "rating_content_descriptions": [
+        {
+          "id": 50,
+          "description": "Violence"
+        },
+        {
+          "id": 55,
+          "description": "Bad Language"
+        }
+      ]
+    },
+    {
+      "id": 5061,
+      "organization": {
+        "id": 1,
+        "name": "ESRB"
+      },
+      "rating_category": {
+        "id": 3,
+        "rating": "E"
+      },
+      "rating_content_descriptions": [
+        {
+          "id": 43,
+          "description": "Mild Animated Violence"
+        },
+        {
+          "id": 2,
+          "description": "Animated Blood"
+        }
+      ]
+    }
+  ],
+  "aggregated_rating": 90.0,
+  "aggregated_rating_count": 1,
+  "alternative_names": [
+    {
+      "id": 2822,
+      "comment": "Chinese title",
+      "name": "奇迹时代"
+    },
+    {
+      "id": 2824,
+      "comment": "Acronym",
+      "name": "AoW"
+    },
+    {
+      "id": 2823,
+      "comment": "Working title",
+      "name": "World of Wonders"
+    }
+  ],
+  "artworks": [
+    {
+      "id": 236489,
+      "height": 720,
+      "image_id": "ar52h5",
+      "width": 1280
+    }
+  ],
+  "cover": {
+    "id": 81122,
+    "height": 800,
+    "image_id": "co1qle",
+    "width": 600
+  },
+  "external_games": [
+    {
+      "id": 140266,
+      "name": "Age of Wonders",
+      "uid": "18414",
+      "url": "https://www.giantbomb.com/games/3030-18414/",
+      "external_game_source": 3
+    },
+    {
+      "id": 76579,
+      "name": "Age of Wonders",
+      "uid": "1207658883",
+      "url": "https://www.gog.com/en/game/age_of_wonders",
+      "external_game_source": 5
+    },
+    {
+      "id": 1185677,
+      "name": "Age of Wonders",
+      "uid": "16878",
+      "url": "https://www.twitch.tv/directory/game/Age of Wonders",
+      "external_game_source": 14
+    },
+    {
+      "id": 13819,
+      "name": "Age of Wonders",
+      "uid": "61500",
+      "url": "https://store.steampowered.com/app/61500",
+      "external_game_source": 1
+    }
+  ],
+  "first_release_date": 942278400,
+  "game_modes": [
+    {
+      "id": 1,
+      "name": "Single player",
+      "slug": "single-player"
+    },
+    {
+      "id": 2,
+      "name": "Multiplayer",
+      "slug": "multiplayer"
+    }
+  ],
+  "genres": [
+    {
+      "id": 12,
+      "name": "Role-playing (RPG)",
+      "slug": "role-playing-rpg"
+    },
+    {
+      "id": 15,
+      "name": "Strategy",
+      "slug": "strategy"
+    },
+    {
+      "id": 16,
+      "name": "Turn-based strategy (TBS)",
+      "slug": "turn-based-strategy-tbs"
+    }
+  ],
+  "involved_companies": [
+    {
+      "id": 1420,
+      "company": {
+        "id": 204,
+        "name": "Gathering of Developers",
+        "slug": "gathering-of-developers"
+      },
+      "developer": false,
+      "porting": false,
+      "publisher": true,
+      "supporting": false
+    },
+    {
+      "id": 19281,
+      "company": {
+        "id": 331,
+        "name": "Triumph Studios",
+        "slug": "triumph-studios"
+      },
+      "developer": true,
+      "porting": false,
+      "publisher": true,
+      "supporting": false
+    },
+    {
+      "id": 19282,
+      "company": {
+        "id": 139,
+        "name": "Take-Two Interactive",
+        "slug": "take-two-interactive"
+      },
+      "developer": false,
+      "porting": false,
+      "publisher": true,
+      "supporting": false
+    },
+    {
+      "id": 69268,
+      "company": {
+        "id": 517,
+        "name": "Paradox Interactive",
+        "slug": "paradox-interactive"
+      },
+      "developer": false,
+      "porting": false,
+      "publisher": true,
+      "supporting": false
+    },
+    {
+      "id": 87877,
+      "company": {
+        "id": 17463,
+        "name": "Epic Games",
+        "slug": "epic-games"
+      },
+      "developer": true,
+      "porting": false,
+      "publisher": false,
+      "supporting": false
+    }
+  ],
+  "keywords": [
+    {
+      "id": 415,
+      "name": "turn-based",
+      "slug": "turn-based"
+    },
+    {
+      "id": 1162,
+      "name": "micromanagement",
+      "slug": "micromanagement"
+    },
+    {
+      "id": 1710,
+      "name": "snow",
+      "slug": "snow"
+    },
+    {
+      "id": 1923,
+      "name": "grid-based movement",
+      "slug": "grid-based-movement"
+    },
+    {
+      "id": 2208,
+      "name": "simultaneous turns",
+      "slug": "simultaneous-turns"
+    },
+    {
+      "id": 4248,
+      "name": "tactical turn-based combat",
+      "slug": "tactical-turn-based-combat"
+    },
+    {
+      "id": 4284,
+      "name": "leveling up",
+      "slug": "leveling-up"
+    },
+    {
+      "id": 4390,
+      "name": "skill points in game",
+      "slug": "skill-points-in-game"
+    },
+    {
+      "id": 4637,
+      "name": "corpse",
+      "slug": "corpse"
+    },
+    {
+      "id": 7440,
+      "name": "dark elves",
+      "slug": "dark-elves"
+    }
+  ],
+  "name": "Age of Wonders",
+  "platforms": [
+    {
+      "id": 3,
+      "abbreviation": "Linux",
+      "name": "Linux",
+      "platform_family": {
+        "id": 4,
+        "name": "Linux"
+      },
+      "slug": "linux",
+      "platform_type": 4
+    },
+    {
+      "id": 6,
+      "abbreviation": "PC",
+      "name": "PC (Microsoft Windows)",
+      "slug": "win",
+      "platform_type": 4
+    }
+  ],
+  "player_perspectives": [
+    {
+      "id": 3,
+      "name": "Bird view / Isometric",
+      "slug": "bird-view-slash-isometric"
+    }
+  ],
+  "rating": 77.2774393580806,
+  "rating_count": 39,
+  "release_dates": [
+    {
+      "id": 190350,
+      "date": 1293753600,
+      "human": "Q4 2010",
+      "m": 12,
+      "platform": {
+        "id": 3,
+        "name": "Linux"
+      },
+      "y": 2010,
+      "date_format": 6,
+      "release_region": 8
+    },
+    {
+      "id": 22303,
+      "date": 978220800,
+      "human": "2000",
+      "m": 12,
+      "platform": {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      "y": 2000,
+      "date_format": 2,
+      "release_region": 1
+    },
+    {
+      "id": 216788,
+      "date": 942278400,
+      "human": "Nov 11, 1999",
+      "m": 11,
+      "platform": {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      "y": 1999,
+      "date_format": 0,
+      "release_region": 2
+    }
+  ],
+  "screenshots": [
+    {
+      "id": 978,
+      "height": 480,
+      "image_id": "bfc1a47agqevrz5on0fp",
+      "width": 640
+    },
+    {
+      "id": 976,
+      "height": 480,
+      "image_id": "hkkw2i0cuouseh1lt6ey",
+      "width": 640
+    },
+    {
+      "id": 975,
+      "height": 480,
+      "image_id": "xwzydcszte2w95vupycg",
+      "width": 640
+    },
+    {
+      "id": 977,
+      "height": 480,
+      "image_id": "cwrcaaxhsrig6lgwhwyb",
+      "width": 640
+    },
+    {
+      "id": 979,
+      "height": 480,
+      "image_id": "wiztjxgqcqx9j3e1yzl6",
+      "width": 640
+    }
+  ],
+  "slug": "age-of-wonders",
+  "summary": "Welcome to Age of Wonders, the authentic turn-based fantasy strategy classic that started the hit series. Age of Wonders’ intimate atmosphere with painterly graphics still shines today. The game’s fully patched up, start building your fantasy empire today! \n \nThe Age of Wonders, once a time of magic and peace. An age swept into the ravaging gale of chaos by the arrival of a single, uninvited race: the Humans. The fragile balance that existed between the ancient races, Elves, Dwarves, Orcs and others, has changed into a struggle for power and survival in the wake of the turmoil the Humans have brought to the land. Prepare for a strategy adventure where you will uncover wondrous ancient artifacts, awesome magical power, and the secrets of a shattered empire. Ally with the forces of light or darkness to determine the fate of the world in the Age of Wonders!",
+  "themes": [
+    {
+      "id": 17,
+      "name": "Fantasy",
+      "slug": "fantasy"
+    },
+    {
+      "id": 41,
+      "name": "4X (explore, expand, exploit, and exterminate)",
+      "slug": "4x-explore-expand-exploit-and-exterminate"
+    }
+  ],
+  "total_rating": 83.63871967904029,
+  "total_rating_count": 40,
+  "url": "https://www.igdb.com/games/age-of-wonders",
+  "videos": [
+    {
+      "id": 3103,
+      "name": "Trailer",
+      "video_id": "P--zaTS2iuA"
+    }
+  ],
+  "websites": [
+    {
+      "id": 88023,
+      "url": "http://ageofwonders.wikia.com/wiki/Age_of_Wonders_1_Wiki",
+      "type": 2
+    },
+    {
+      "id": 88024,
+      "url": "https://en.wikipedia.org/wiki/Age_of_Wonders",
+      "type": 3
+    },
+    {
+      "id": 17550,
+      "url": "https://store.steampowered.com/app/61500",
+      "type": 13
+    },
+    {
+      "id": 66905,
+      "url": "http://www.triumphstudios.com/ageofwonders/",
+      "type": 1
+    },
+    {
+      "id": 118510,
+      "url": "https://www.gog.com/game/age_of_wonders",
+      "type": 17
+    },
+    {
+      "id": 343743,
+      "url": "https://www.twitch.tv/directory/game/Age%20of%20Wonders",
+      "type": 6
+    }
+  ],
+  "language_supports": [
+    {
+      "id": 478923,
+      "language": {
+        "id": 7,
+        "name": "English",
+        "locale": "en-US"
+      },
+      "language_support_type": {
+        "id": 1,
+        "name": "Audio"
+      }
+    },
+    {
+      "id": 324204,
+      "language": {
+        "id": 7,
+        "name": "English",
+        "locale": "en-US"
+      },
+      "language_support_type": {
+        "id": 3,
+        "name": "Interface"
+      }
+    }
+  ],
+  "collections": [
+    {
+      "id": 124,
+      "name": "Age of Wonders",
+      "slug": "age-of-wonders"
+    }
+  ],
+  "game_type": {
+    "id": 0,
+    "type": "Main Game"
+  }
+}
